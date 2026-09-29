@@ -1,0 +1,201 @@
+﻿ID;Nome;Sexo;Idade;Estado Civil;Escolaridade;Departamento;Cargo;Salário (R$);Data Admissão;Tempo Empresa (anos);Status;Avaliação Desempenho (1-5);Dias Ausência (ano);Promoção último ano;Horas Treinamento (ano);Satisfação (1-5);Engajamento
+FUNC0001;Miguel Moura Ferreira;Masculino;35;Solteiro(a);Ensino Médio;Financeiro;Assistente Financeiro;3110;21/01/2024;2.7;Desligado(a);4;6;Sim;11;2;Alto
+FUNC0002;Miguel Pinto Cavalcanti;Masculino;25;Casado(a);Pós-graduação;TI;Analista de Suporte;4940;21/11/2022;3.9;Ativo(a);2;5;Não;38;3;Baixo
+FUNC0003;Carlos Souza Fernandes;Masculino;26;União Estável;Pós-graduação;Financeiro;Analista Financeiro;5110;09/02/2024;2.6;Ativo(a);4;7;Não;27;4;Alto
+FUNC0004;Julia Almeida Freitas;Feminino;28;Casado(a);Ensino Médio;Marketing;Assistente de Marketing;3670;30/10/2024;1.9;Ativo(a);3;13;Não;11;3;Médio
+FUNC0005;Rodrigo Santos Carvalho;Masculino;42;Solteiro(a);Graduação;Vendas;Gerente de Vendas;10270;12/08/2018;8.1;Ativo(a);3;1;Não;0;4;Alto
+FUNC0006;Paula Dias Dias;Feminino;47;Casado(a);Pós-graduação;Atendimento;Atendente;2020;10/02/2025;1.6;Desligado(a);4;5;Não;21;3;Alto
+FUNC0007;Beatriz Mendes Teixeira;Feminino;18;Solteiro(a);Ensino Médio;Marketing;Analista de Marketing;5170;23/06/2019;7.3;Ativo(a);3;6;Não;20;4;Alto
+FUNC0008;Patrícia Pinto Pereira;Feminino;35;Divorciado(a);Ensino Médio;Operações;Auxiliar Operacional;2640;01/11/2019;6.9;Ativo(a);3;13;Não;45;5;Médio
+FUNC0009;João Silva Souza;Masculino;51;Casado(a);Graduação;Vendas;Gerente de Vendas;11790;14/09/2025;1.0;Ativo(a);4;0;Não;34;2;Alto
+FUNC0010;Aline Pereira Ferreira;Feminino;33;Divorciado(a);Pós-graduação;Atendimento;Supervisor de Atendimento;7010;05/12/2018;7.8;Ativo(a);3;13;Não;19;3;Alto
+FUNC0011;Cecília Carvalho Oliveira;Feminino;28;Casado(a);Graduação;Vendas;Vendedor Pleno;3620;27/11/2025;0.8;Ativo(a);5;8;Não;27;4;Médio
+FUNC0012;Fernando Fernandes Araújo;Masculino;37;Divorciado(a);Mestrado;TI;Desenvolvedor Júnior;4810;09/08/2025;1.1;Ativo(a);2;4;Não;36;4;Alto
+FUNC0013;Vinícius Souza Santos;Masculino;28;Solteiro(a);Graduação;Vendas;Vendedor Pleno;3780;09/08/2024;2.1;Ativo(a);3;10;Não;31;5;Alto
+FUNC0014;Tatiane Dias Azevedo;Feminino;30;Solteiro(a);Ensino Médio;Atendimento;Supervisor de Atendimento;5830;20/03/2021;5.5;Ativo(a);3;9;Não;15;1;Médio
+FUNC0015;Larissa Cavalcanti Teixeira;Feminino;31;União Estável;Mestrado;Vendas;Vendedor Júnior;3470;02/03/2020;6.6;Desligado(a);4;10;Sim;32;5;Alto
+FUNC0016;Patrícia Oliveira Lima;Feminino;38;Casado(a);Ensino Médio;Financeiro;Analista Financeiro;5590;26/04/2025;1.4;Ativo(a);5;2;Não;18;2;Alto
+FUNC0017;Paulo Martins Fernandes;Masculino;34;Casado(a);Graduação;TI;Analista de Suporte;4470;15/07/2021;5.2;Ativo(a);3;13;Não;41;5;Médio
+FUNC0018;Helena Correia Ferreira;Feminino;39;Casado(a);Pós-graduação;Atendimento;Supervisor de Atendimento;6240;22/11/2024;1.9;Ativo(a);3;4;Não;52;5;Alto
+FUNC0019;Gabriela Dias Ribeiro;Feminino;38;Casado(a);Graduação;Vendas;Vendedor Júnior;3050;11/08/2023;3.1;Ativo(a);3;7;Não;9;5;Alto
+FUNC0020;Igor Fernandes Lima;Masculino;46;Solteiro(a);Ensino Médio;Marketing;Analista de Marketing;4610;03/12/2022;3.8;Ativo(a);4;3;Não;39;3;Baixo
+FUNC0021;Clara Barros Araújo;Feminino;36;Casado(a);Graduação;RH;Assistente de RH;3240;26/09/2017;9.0;Desligado(a);5;4;Não;12;2;Alto
+FUNC0022;Fernando Costa Fernandes;Masculino;22;Casado(a);Graduação;Atendimento;Analista de Atendimento;4350;21/05/2026;0.4;Ativo(a);3;8;Não;7;4;Alto
+FUNC0023;Pedro Pereira Cavalcanti;Masculino;32;Solteiro(a);Mestrado;TI;Desenvolvedor Sênior;13300;29/03/2023;3.5;Ativo(a);4;0;Sim;23;3;Baixo
+FUNC0024;Pedro Rocha Vieira;Masculino;27;Divorciado(a);Pós-graduação;Marketing;Gerente de Marketing;10320;09/05/2026;0.4;Ativo(a);2;12;Não;47;3;Baixo
+FUNC0025;Rafael Moura Cavalcanti;Masculino;30;Divorciado(a);Ensino Médio;TI;Desenvolvedor Júnior;4510;18/09/2018;8.0;Ativo(a);3;13;Não;36;5;Alto
+FUNC0026;Rafael Cardoso Oliveira;Masculino;22;União Estável;Pós-graduação;Marketing;Analista de Marketing;4810;18/04/2023;3.5;Ativo(a);4;1;Não;36;3;Alto
+FUNC0027;Eduardo Moura Araújo;Masculino;40;Solteiro(a);Ensino Médio;TI;Analista de Suporte;4680;11/11/2019;6.9;Ativo(a);4;8;Não;33;5;Alto
+FUNC0028;Manuela Ribeiro Correia;Feminino;44;União Estável;Pós-graduação;Vendas;Gerente de Vendas;8940;08/03/2023;3.6;Ativo(a);3;10;Não;21;4;Médio
+FUNC0029;Clara Vieira Nunes;Feminino;39;Solteiro(a);Pós-graduação;TI;Desenvolvedor Pleno;7020;30/03/2018;8.5;Ativo(a);5;9;Não;34;4;Alto
+FUNC0030;Cecília Fernandes Lima;Feminino;50;Solteiro(a);Mestrado;Vendas;Vendedor Júnior;3030;24/05/2020;6.4;Ativo(a);4;8;Não;9;4;Alto
+FUNC0031;Isabella Moura Lima;Feminino;28;Casado(a);Graduação;Operações;Analista de Operações;5250;02/08/2023;3.2;Ativo(a);3;8;Não;21;5;Médio
+FUNC0032;Cecília Barbosa Barros;Feminino;43;Casado(a);Graduação;Vendas;Vendedor Júnior;3040;31/12/2021;4.7;Ativo(a);2;2;Não;33;5;Médio
+FUNC0033;Rodrigo Nunes Barbosa;Masculino;18;Casado(a);Pós-graduação;Operações;Gerente de Operações;11180;13/04/2018;8.5;Ativo(a);4;5;Não;10;4;Alto
+FUNC0034;Renata Cavalcanti Barbosa;Feminino;35;União Estável;Graduação;Operações;Gerente de Operações;13420;03/09/2020;6.1;Ativo(a);1;7;Não;18;4;Médio
+FUNC0035;Davi Santos Ferreira;Masculino;30;Casado(a);Pós-graduação;Operações;Auxiliar Operacional;2750;02/05/2017;9.4;Ativo(a);3;9;Não;0;1;Médio
+FUNC0036;Manuela Pinto Vieira;Feminino;37;Solteiro(a);Ensino Médio;Atendimento;Atendente;1820;14/12/2024;1.8;Ativo(a);3;15;Não;39;4;Alto
+FUNC0037;Davi Mendes Mendes;Masculino;48;Casado(a);Graduação;Vendas;Vendedor Júnior;2810;25/01/2019;7.7;Ativo(a);5;2;Não;25;5;Médio
+FUNC0038;Bruna Ribeiro Lima;Feminino;46;União Estável;Ensino Médio;Operações;Analista de Operações;4080;08/09/2020;6.1;Ativo(a);3;4;Não;19;5;Alto
+FUNC0039;Julia Vieira Araújo;Feminino;41;Solteiro(a);Graduação;Operações;Gerente de Operações;10580;07/08/2017;9.2;Ativo(a);5;0;Não;27;3;Baixo
+FUNC0040;Gael Ferreira Araújo;Masculino;24;Solteiro(a);Graduação;Operações;Analista de Operações;5340;22/11/2022;3.9;Ativo(a);1;9;Não;27;4;Alto
+FUNC0041;Priscila Barros Araújo;Feminino;34;Casado(a);Ensino Médio;TI;Desenvolvedor Júnior;5110;20/12/2023;2.8;Ativo(a);4;4;Não;31;3;Alto
+FUNC0042;Renata Nunes Rocha;Feminino;31;Solteiro(a);Pós-graduação;RH;Analista de RH;5160;13/10/2018;8.0;Ativo(a);3;8;Não;39;3;Alto
+FUNC0043;Rodrigo Barros Pereira;Masculino;40;Casado(a);Graduação;Atendimento;Analista de Atendimento;3590;13/08/2022;4.1;Desligado(a);3;14;Não;10;4;Alto
+FUNC0044;Heloísa Vieira Lima;Masculino;33;Solteiro(a);Ensino Médio;Operações;Analista de Operações;4940;21/09/2021;5.0;Ativo(a);3;7;Não;43;2;Baixo
+FUNC0045;Manuela Nunes Vieira;Feminino;32;Divorciado(a);Graduação;Vendas;Vendedor Júnior;3060;30/12/2021;4.8;Ativo(a);4;1;Sim;6;3;Alto
+FUNC0046;Lucas Nunes Mendes;Masculino;33;Solteiro(a);Ensino Médio;Atendimento;Atendente;2010;04/04/2019;7.5;Desligado(a);2;5;Não;17;2;Alto
+FUNC0047;Laura Carvalho Ribeiro;Feminino;31;Solteiro(a);Ensino Médio;Marketing;Gerente de Marketing;12150;27/08/2019;7.1;Ativo(a);4;0;Sim;26;2;Médio
+FUNC0048;Gael Santos Pereira;Masculino;39;Casado(a);Graduação;RH;Assistente de RH;3160;24/02/2022;4.6;Ativo(a);5;2;Sim;20;3;Médio
+FUNC0049;Miguel Oliveira Carvalho;Masculino;51;Divorciado(a);Ensino Médio;Atendimento;Analista de Atendimento;3550;19/03/2026;0.5;Desligado(a);4;2;Não;7;2;Alto
+FUNC0050;João Oliveira Moreira;Masculino;33;Casado(a);Pós-graduação;TI;Desenvolvedor Pleno;9570;19/12/2022;3.8;Ativo(a);3;5;Não;19;4;Médio
+FUNC0051;Ana Ferreira Martins;Feminino;46;Divorciado(a);Ensino Médio;Marketing;Analista de Marketing;5530;23/07/2024;2.2;Ativo(a);4;8;Não;16;3;Baixo
+FUNC0052;Felipe Araújo Barros;Masculino;36;Solteiro(a);Ensino Médio;Vendas;Vendedor Pleno;5100;14/09/2018;8.0;Ativo(a);2;6;Não;18;5;Médio
+FUNC0053;Valentina Vieira Azevedo;Feminino;46;Casado(a);Graduação;RH;Assistente de RH;3370;17/07/2021;5.2;Ativo(a);4;11;Não;0;5;Alto
+FUNC0054;Renan Cardoso Martins;Masculino;34;Divorciado(a);Graduação;Operações;Auxiliar Operacional;2300;30/01/2020;6.7;Ativo(a);4;6;Não;10;3;Alto
+FUNC0055;Marina Martins Lima;Feminino;40;Divorciado(a);Pós-graduação;TI;Desenvolvedor Pleno;7130;24/04/2018;8.4;Ativo(a);3;13;Não;3;4;Alto
+FUNC0056;João Santos Costa;Masculino;53;Divorciado(a);Pós-graduação;Operações;Supervisor de Operações;7600;06/10/2020;6.0;Desligado(a);5;8;Não;39;1;Médio
+FUNC0057;Bruno Vieira Oliveira;Masculino;45;Divorciado(a);Pós-graduação;Atendimento;Analista de Atendimento;4350;11/03/2021;5.6;Desligado(a);5;0;Sim;1;5;Alto
+FUNC0058;Valentina Pinto Vieira;Feminino;20;União Estável;Ensino Médio;RH;Analista de RH;6310;23/02/2026;0.6;Desligado(a);3;5;Não;29;2;Médio
+FUNC0059;Davi Pereira Pereira;Masculino;51;Divorciado(a);Graduação;Financeiro;Analista Financeiro;5580;06/07/2019;7.2;Ativo(a);3;11;Não;41;5;Alto
+FUNC0060;Gael Teixeira Rocha;Masculino;35;Divorciado(a);Graduação;Marketing;Assistente de Marketing;3100;08/03/2017;9.6;Ativo(a);3;9;Não;15;3;Médio
+FUNC0061;Gustavo Ribeiro Silva;Masculino;48;Casado(a);Ensino Médio;Financeiro;Analista Financeiro;6860;11/02/2026;0.6;Ativo(a);5;3;Não;32;4;Médio
+FUNC0062;Rafael Carvalho Vieira;Masculino;18;Casado(a);Graduação;Marketing;Analista de Marketing;6150;06/04/2017;9.5;Desligado(a);2;7;Não;17;3;Médio
+FUNC0063;Sophia Oliveira Fernandes;Feminino;30;Casado(a);Graduação;Vendas;Vendedor Pleno;5440;16/09/2020;6.0;Ativo(a);4;10;Sim;44;5;Alto
+FUNC0064;Matheus Cavalcanti Souza;Masculino;23;Solteiro(a);Ensino Médio;Vendas;Gerente de Vendas;11440;17/07/2018;8.2;Ativo(a);4;6;Sim;7;3;Médio
+FUNC0065;Felipe Rocha Freitas;Masculino;34;Solteiro(a);Pós-graduação;Vendas;Vendedor Júnior;2530;14/05/2020;6.4;Ativo(a);3;4;Não;9;4;Alto
+FUNC0066;Mariana Souza Costa;Feminino;24;Solteiro(a);Ensino Médio;TI;Desenvolvedor Júnior;4190;20/08/2020;6.1;Ativo(a);2;4;Não;12;5;Alto
+FUNC0067;Fernando Costa Araújo;Masculino;31;Solteiro(a);Pós-graduação;Atendimento;Atendente;2490;24/03/2024;2.5;Ativo(a);3;8;Não;23;4;Alto
+FUNC0068;Vinícius Rocha Santos;Masculino;31;Solteiro(a);Graduação;Vendas;Vendedor Júnior;3350;25/07/2021;5.2;Desligado(a);2;1;Não;0;1;Médio
+FUNC0069;Diego Nunes Almeida;Masculino;48;Casado(a);Graduação;Operações;Auxiliar Operacional;2770;26/10/2017;8.9;Desligado(a);5;6;Não;23;3;Baixo
+FUNC0070;Miguel Costa Silva;Masculino;38;Casado(a);Graduação;Financeiro;Assistente Financeiro;3320;29/03/2025;1.5;Ativo(a);4;3;Não;6;4;Médio
+FUNC0071;Cecília Mendes Santos;Feminino;32;União Estável;Graduação;RH;Gerente de RH;9240;17/04/2021;5.5;Ativo(a);4;0;Sim;16;5;Alto
+FUNC0072;Gael Costa Ferreira;Masculino;25;Divorciado(a);Pós-graduação;TI;Desenvolvedor Júnior;4590;29/12/2020;5.8;Desligado(a);4;1;Não;7;4;Alto
+FUNC0073;Clara Carvalho Cardoso;Feminino;29;Solteiro(a);Ensino Médio;TI;Analista de Suporte;3880;13/12/2024;1.8;Ativo(a);4;7;Sim;40;4;Alto
+FUNC0074;Carlos Santos Nunes;Masculino;39;Divorciado(a);Pós-graduação;Marketing;Assistente de Marketing;3850;01/04/2018;8.5;Ativo(a);3;11;Não;23;3;Baixo
+FUNC0075;Bernardo Costa Freitas;Masculino;18;Casado(a);Pós-graduação;Vendas;Vendedor Júnior;2730;07/11/2021;4.9;Ativo(a);4;4;Não;6;1;Alto
+FUNC0076;Pedro Silva Pereira;Masculino;26;Casado(a);Graduação;Atendimento;Atendente;1980;21/01/2025;1.7;Ativo(a);4;7;Sim;33;4;Médio
+FUNC0077;Camila Martins Pereira;Feminino;25;Divorciado(a);Ensino Médio;Atendimento;Atendente;2550;08/02/2026;0.6;Ativo(a);4;8;Não;12;3;Médio
+FUNC0078;Patrícia Souza Rocha;Feminino;26;Solteiro(a);Ensino Médio;TI;Desenvolvedor Pleno;8460;08/03/2019;7.6;Ativo(a);3;9;Não;29;3;Baixo
+FUNC0079;Rodrigo Ferreira Ribeiro;Masculino;34;União Estável;Pós-graduação;Vendas;Vendedor Júnior;3200;19/01/2021;5.7;Ativo(a);4;4;Não;4;3;Médio
+FUNC0080;Renan Martins Nunes;Masculino;43;Solteiro(a);Pós-graduação;Operações;Analista de Operações;4230;06/06/2026;0.3;Desligado(a);5;8;Não;15;4;Alto
+FUNC0081;Valentina Carvalho Cardoso;Feminino;25;Solteiro(a);Graduação;Operações;Auxiliar Operacional;2780;22/10/2025;0.9;Desligado(a);4;1;Não;0;2;Alto
+FUNC0082;Gabriel Souza Costa;Masculino;33;Casado(a);Graduação;Vendas;Vendedor Júnior;3260;26/10/2025;0.9;Ativo(a);3;1;Não;20;4;Alto
+FUNC0083;Igor Nunes Vieira;Masculino;26;União Estável;Pós-graduação;Vendas;Vendedor Júnior;2940;08/04/2023;3.5;Ativo(a);4;0;Não;31;1;Médio
+FUNC0084;Gael Vieira Lima;Masculino;39;Solteiro(a);Pós-graduação;RH;Analista de RH;6080;15/03/2026;0.5;Ativo(a);3;5;Não;11;4;Médio
+FUNC0085;Felipe Souza Cavalcanti;Masculino;41;União Estável;Ensino Médio;Financeiro;Assistente Financeiro;3300;02/10/2021;5.0;Ativo(a);5;1;Não;2;3;Médio
+FUNC0086;Arthur Cavalcanti Vieira;Masculino;50;União Estável;Pós-graduação;Vendas;Vendedor Júnior;3180;24/06/2023;3.3;Ativo(a);3;13;Não;16;2;Baixo
+FUNC0087;Heloísa Fernandes Rocha;Masculino;30;União Estável;Pós-graduação;Vendas;Vendedor Pleno;3670;24/05/2020;6.4;Ativo(a);3;13;Não;26;5;Alto
+FUNC0088;Otávio Correia Oliveira;Masculino;22;União Estável;Pós-graduação;Financeiro;Assistente Financeiro;3370;05/04/2024;2.5;Ativo(a);3;14;Não;71;2;Médio
+FUNC0089;Theo Correia Pinto;Masculino;20;Divorciado(a);Ensino Médio;Marketing;Gerente de Marketing;11470;19/12/2019;6.8;Ativo(a);3;6;Não;30;5;Médio
+FUNC0090;Arthur Cardoso Rocha;Masculino;21;União Estável;Graduação;Atendimento;Analista de Atendimento;4180;15/11/2017;8.9;Ativo(a);3;5;Não;40;4;Médio
+FUNC0091;Vanessa Teixeira Teixeira;Feminino;36;Divorciado(a);Pós-graduação;Atendimento;Analista de Atendimento;4240;10/02/2025;1.6;Desligado(a);5;0;Não;0;4;Alto
+FUNC0092;Bruna Pereira Ferreira;Feminino;50;Solteiro(a);Graduação;Operações;Auxiliar Operacional;2910;03/07/2017;9.2;Ativo(a);3;9;Não;20;4;Médio
+FUNC0093;Manuela Rocha Carvalho;Feminino;55;União Estável;Pós-graduação;Operações;Auxiliar Operacional;2290;11/05/2017;9.4;Ativo(a);3;9;Não;20;4;Médio
+FUNC0094;Helena Azevedo Costa;Feminino;24;Divorciado(a);Pós-graduação;Vendas;Vendedor Júnior;2800;16/02/2026;0.6;Ativo(a);3;6;Não;16;5;Alto
+FUNC0095;Miguel Vieira Correia;Masculino;22;Casado(a);Pós-graduação;Vendas;Vendedor Júnior;3070;24/07/2024;2.2;Desligado(a);4;1;Não;33;3;Alto
+FUNC0096;Letícia Moreira Santos;Feminino;39;União Estável;Pós-graduação;Atendimento;Atendente;1820;27/10/2017;8.9;Desligado(a);2;6;Não;15;4;Alto
+FUNC0097;Aline Martins Azevedo;Feminino;24;União Estável;Mestrado;Atendimento;Atendente;1980;24/02/2025;1.6;Ativo(a);2;2;Não;10;1;Baixo
+FUNC0098;Matheus Fernandes Ribeiro;Masculino;36;Divorciado(a);Pós-graduação;Atendimento;Analista de Atendimento;3530;20/03/2018;8.5;Ativo(a);4;4;Não;17;3;Médio
+FUNC0099;Beatriz Moura Teixeira;Feminino;42;Casado(a);Mestrado;Marketing;Assistente de Marketing;3760;03/09/2023;3.1;Ativo(a);4;1;Sim;2;4;Alto
+FUNC0100;Ana Freitas Ribeiro;Feminino;24;Casado(a);Mestrado;Marketing;Assistente de Marketing;3630;21/09/2022;4.0;Ativo(a);3;12;Não;11;3;Alto
+FUNC0101;Arthur Oliveira Freitas;Masculino;29;União Estável;Graduação;Atendimento;Atendente;2410;25/11/2017;8.8;Ativo(a);3;5;Não;21;3;Alto
+FUNC0102;Sophia Freitas Teixeira;Feminino;47;Casado(a);Pós-graduação;RH;Assistente de RH;2970;19/07/2022;4.2;Ativo(a);3;8;Não;25;4;Alto
+FUNC0103;Otávio Dias Souza;Masculino;34;Solteiro(a);Graduação;Atendimento;Atendente;2720;26/02/2021;5.6;Ativo(a);3;11;Não;26;4;Médio
+FUNC0104;Renan Martins Freitas;Masculino;37;Casado(a);Ensino Médio;Financeiro;Assistente Financeiro;3360;23/11/2024;1.8;Ativo(a);4;0;Não;3;2;Baixo
+FUNC0105;Gabriel Cavalcanti Moreira;Masculino;46;Casado(a);Mestrado;Operações;Analista de Operações;5220;11/09/2025;1.0;Ativo(a);2;8;Não;17;3;Médio
+FUNC0106;Gael Costa Martins;Masculino;24;União Estável;Ensino Médio;RH;Analista de RH;5190;25/10/2016;9.9;Ativo(a);4;0;Sim;9;4;Médio
+FUNC0107;Paulo Costa Ribeiro;Masculino;39;União Estável;Graduação;TI;Gerente de TI;17470;06/03/2017;9.6;Desligado(a);2;11;Não;39;3;Alto
+FUNC0108;Tatiane Pereira Nunes;Feminino;33;Divorciado(a);Graduação;Vendas;Vendedor Pleno;5300;17/11/2022;3.9;Ativo(a);4;4;Sim;17;4;Alto
+FUNC0109;Helena Pinto Nunes;Feminino;23;Solteiro(a);Graduação;Marketing;Assistente de Marketing;3090;11/08/2017;9.1;Ativo(a);4;6;Sim;32;4;Médio
+FUNC0110;Sophia Martins Lima;Feminino;38;União Estável;Pós-graduação;Operações;Supervisor de Operações;8940;13/03/2025;1.5;Ativo(a);4;6;Sim;25;3;Baixo
+FUNC0111;Maria Barbosa Lima;Feminino;29;Casado(a);Pós-graduação;Atendimento;Analista de Atendimento;3450;16/11/2024;1.9;Ativo(a);3;5;Não;9;1;Médio
+FUNC0112;Gabriel Almeida Nunes;Masculino;35;Casado(a);Ensino Médio;Vendas;Vendedor Júnior;3380;30/04/2019;7.4;Ativo(a);4;5;Sim;20;3;Médio
+FUNC0113;Rafael Santos Barbosa;Masculino;45;Casado(a);Graduação;Vendas;Vendedor Pleno;5030;12/07/2023;3.2;Ativo(a);4;5;Não;23;3;Médio
+FUNC0114;Rafael Pinto Costa;Masculino;37;Casado(a);Pós-graduação;Financeiro;Assistente Financeiro;3160;05/12/2022;3.8;Ativo(a);4;9;Sim;40;5;Alto
+FUNC0115;Priscila Moura Azevedo;Feminino;32;Divorciado(a);Mestrado;Operações;Auxiliar Operacional;2820;14/07/2022;4.2;Desligado(a);3;11;Não;11;4;Alto
+FUNC0116;Fernanda Ferreira Vieira;Feminino;38;Divorciado(a);Graduação;Operações;Analista de Operações;4340;11/08/2019;7.1;Ativo(a);4;0;Sim;35;4;Alto
+FUNC0117;Alice Teixeira Martins;Feminino;26;Casado(a);Pós-graduação;Financeiro;Analista Financeiro;6180;24/02/2017;9.6;Desligado(a);4;6;Sim;22;3;Alto
+FUNC0118;Isabella Teixeira Fernandes;Feminino;42;Divorciado(a);Pós-graduação;Financeiro;Analista Financeiro;7170;11/01/2019;7.7;Ativo(a);4;1;Sim;14;4;Médio
+FUNC0119;Lucas Pinto Ribeiro;Masculino;31;Solteiro(a);Pós-graduação;RH;Analista de RH;6370;28/07/2018;8.2;Ativo(a);3;2;Não;14;5;Alto
+FUNC0120;Diego Costa Ribeiro;Masculino;27;Solteiro(a);Graduação;Atendimento;Atendente;2720;23/04/2019;7.4;Ativo(a);3;9;Não;34;5;Alto
+FUNC0121;Valentina Mendes Moura;Feminino;29;União Estável;Graduação;Marketing;Assistente de Marketing;3300;14/08/2018;8.1;Ativo(a);3;6;Não;40;5;Médio
+FUNC0122;Marina Araújo Araújo;Feminino;52;Solteiro(a);Mestrado;Marketing;Analista de Marketing;5220;18/06/2023;3.3;Ativo(a);4;8;Não;28;4;Médio
+FUNC0123;Davi Cardoso Araújo;Masculino;45;Solteiro(a);Pós-graduação;Operações;Auxiliar Operacional;2750;18/11/2016;9.9;Ativo(a);5;0;Sim;14;5;Alto
+FUNC0124;Tatiane Dias Correia;Feminino;33;Solteiro(a);Graduação;Operações;Analista de Operações;4390;26/05/2025;1.3;Ativo(a);3;4;Não;4;1;Médio
+FUNC0125;André Freitas Pinto;Masculino;39;União Estável;Pós-graduação;Operações;Analista de Operações;4170;27/02/2019;7.6;Ativo(a);2;13;Não;0;1;Médio
+FUNC0126;Bruna Ferreira Martins;Feminino;37;Casado(a);Ensino Médio;TI;Desenvolvedor Júnior;4470;05/03/2019;7.6;Ativo(a);2;4;Não;37;5;Alto
+FUNC0127;Gustavo Souza Vieira;Masculino;41;Divorciado(a);Graduação;Vendas;Vendedor Júnior;2650;12/04/2018;8.5;Ativo(a);5;2;Não;37;5;Médio
+FUNC0128;Eduardo Pinto Mendes;Masculino;27;Solteiro(a);Mestrado;Financeiro;Assistente Financeiro;4100;28/05/2025;1.3;Ativo(a);2;2;Não;19;2;Médio
+FUNC0129;Felipe Souza Freitas;Masculino;38;Solteiro(a);Mestrado;Operações;Analista de Operações;5030;16/07/2021;5.2;Ativo(a);4;9;Não;19;3;Baixo
+FUNC0130;André Oliveira Santos;Masculino;36;Solteiro(a);Pós-graduação;Operações;Analista de Operações;4120;21/11/2025;0.9;Ativo(a);5;3;Não;27;2;Alto
+FUNC0131;Vinícius Cardoso Rocha;Masculino;43;Solteiro(a);Pós-graduação;Vendas;Gerente de Vendas;11500;04/03/2025;1.6;Ativo(a);4;3;Sim;5;4;Médio
+FUNC0132;Rodrigo Silva Ribeiro;Masculino;32;Solteiro(a);Pós-graduação;Financeiro;Analista Financeiro;5620;13/10/2022;4.0;Desligado(a);2;12;Não;5;1;Alto
+FUNC0133;Otávio Araújo Araújo;Masculino;41;Solteiro(a);Ensino Médio;RH;Analista de RH;6240;02/12/2023;2.8;Ativo(a);4;4;Sim;24;1;Alto
+FUNC0134;Gabriel Azevedo Fernandes;Masculino;52;União Estável;Pós-graduação;Financeiro;Analista Financeiro;7050;03/01/2024;2.7;Ativo(a);3;6;Não;12;3;Baixo
+FUNC0135;André Araújo Moura;Masculino;45;Solteiro(a);Mestrado;Vendas;Vendedor Júnior;3140;22/05/2022;4.4;Ativo(a);4;1;Não;26;4;Alto
+FUNC0136;Cecília Ribeiro Lima;Feminino;42;União Estável;Graduação;Operações;Gerente de Operações;11750;28/12/2021;4.8;Ativo(a);4;4;Não;28;5;Alto
+FUNC0137;Paula Azevedo Almeida;Feminino;43;Divorciado(a);Ensino Médio;Operações;Auxiliar Operacional;2760;17/07/2018;8.2;Ativo(a);4;5;Sim;28;5;Médio
+FUNC0138;Fernando Souza Moura;Masculino;30;Solteiro(a);Graduação;Marketing;Analista de Marketing;5490;24/12/2023;2.8;Ativo(a);4;0;Não;30;3;Alto
+FUNC0139;Felipe Souza Cavalcanti;Masculino;45;Casado(a);Graduação;TI;Desenvolvedor Júnior;5130;07/03/2024;2.6;Desligado(a);4;3;Não;13;2;Baixo
+FUNC0140;Vanessa Azevedo Carvalho;Feminino;27;Solteiro(a);Pós-graduação;TI;Desenvolvedor Sênior;15830;20/06/2019;7.3;Ativo(a);4;3;Sim;18;4;Médio
+FUNC0141;Carlos Vieira Santos;Masculino;18;Solteiro(a);Ensino Médio;Operações;Analista de Operações;5690;26/01/2024;2.7;Desligado(a);2;6;Não;22;1;Alto
+FUNC0142;Otávio Moreira Freitas;Masculino;44;Solteiro(a);Ensino Médio;Vendas;Vendedor Pleno;3520;22/09/2020;6.0;Ativo(a);4;2;Não;33;3;Baixo
+FUNC0143;Valentina Correia Costa;Feminino;35;Casado(a);Pós-graduação;TI;Desenvolvedor Júnior;4750;09/02/2022;4.6;Ativo(a);3;13;Não;26;5;Médio
+FUNC0144;Renan Vieira Pinto;Masculino;27;Solteiro(a);Ensino Médio;RH;Assistente de RH;3370;10/07/2019;7.2;Desligado(a);1;3;Não;20;4;Alto
+FUNC0145;Otávio Santos Carvalho;Masculino;39;Divorciado(a);Mestrado;TI;Desenvolvedor Sênior;14420;09/07/2023;3.2;Ativo(a);5;11;Sim;39;5;Alto
+FUNC0146;Gabriela Barros Azevedo;Feminino;31;Solteiro(a);Ensino Médio;TI;Desenvolvedor Júnior;5130;19/02/2017;9.6;Ativo(a);3;4;Não;47;2;Alto
+FUNC0147;Paulo Moura Rocha;Masculino;44;Solteiro(a);Pós-graduação;Marketing;Analista de Marketing;5990;27/12/2017;8.8;Ativo(a);3;9;Não;22;3;Alto
+FUNC0148;Thiago Pereira Freitas;Masculino;25;Divorciado(a);Pós-graduação;Vendas;Vendedor Pleno;5100;01/09/2018;8.1;Desligado(a);2;2;Não;34;1;Médio
+FUNC0149;Manuela Silva Ribeiro;Feminino;20;Solteiro(a);Graduação;Vendas;Vendedor Júnior;3060;01/12/2020;5.8;Desligado(a);3;10;Não;16;3;Alto
+FUNC0150;Mariana Barbosa Pinto;Feminino;38;Solteiro(a);Graduação;Financeiro;Assistente Financeiro;3460;08/02/2025;1.6;Ativo(a);3;9;Não;25;3;Médio
+FUNC0151;Gael Rocha Ferreira;Masculino;48;Solteiro(a);Graduação;RH;Assistente de RH;2810;24/03/2022;4.5;Ativo(a);3;5;Não;23;3;Alto
+FUNC0152;Heloísa Ribeiro Martins;Masculino;27;Divorciado(a);Graduação;RH;Assistente de RH;3280;31/01/2023;3.7;Ativo(a);3;2;Não;20;3;Médio
+FUNC0153;Larissa Barbosa Rocha;Feminino;43;Divorciado(a);Graduação;Marketing;Analista de Marketing;6880;27/06/2021;5.3;Ativo(a);5;7;Não;22;5;Alto
+FUNC0154;Heloísa Vieira Ribeiro;Masculino;32;Casado(a);Graduação;Marketing;Analista de Marketing;6470;01/11/2025;0.9;Ativo(a);3;3;Não;12;5;Alto
+FUNC0155;Laura Cavalcanti Rocha;Feminino;30;Divorciado(a);Ensino Médio;Vendas;Vendedor Júnior;3160;18/10/2024;1.9;Desligado(a);4;0;Não;14;4;Alto
+FUNC0156;Lorena Carvalho Correia;Feminino;26;União Estável;Graduação;RH;Assistente de RH;3730;24/01/2020;6.7;Ativo(a);4;8;Sim;19;5;Médio
+FUNC0157;Paula Costa Rocha;Feminino;31;Casado(a);Mestrado;TI;Analista de Suporte;4580;03/08/2021;5.2;Ativo(a);3;12;Não;32;5;Alto
+FUNC0158;Larissa Pereira Fernandes;Feminino;30;União Estável;Graduação;Financeiro;Analista Financeiro;5830;18/11/2021;4.9;Ativo(a);5;1;Não;24;3;Baixo
+FUNC0159;Igor Almeida Teixeira;Masculino;27;União Estável;Graduação;Vendas;Vendedor Pleno;5120;17/12/2025;0.8;Ativo(a);4;1;Não;8;3;Baixo
+FUNC0160;Letícia Moreira Correia;Feminino;33;União Estável;Pós-graduação;Financeiro;Analista Financeiro;6470;05/10/2022;4.0;Ativo(a);3;10;Não;35;5;Alto
+FUNC0161;Eduardo Costa Martins;Masculino;40;Casado(a);Pós-graduação;Marketing;Analista de Marketing;5550;12/02/2025;1.6;Ativo(a);4;6;Não;0;5;Médio
+FUNC0162;João Ribeiro Costa;Masculino;30;Casado(a);Pós-graduação;Operações;Analista de Operações;5730;22/07/2026;0.2;Desligado(a);3;4;Não;30;3;Alto
+FUNC0163;Gustavo Azevedo Teixeira;Masculino;31;Solteiro(a);Graduação;TI;Analista de Suporte;4310;11/10/2024;2.0;Ativo(a);4;4;Não;15;4;Alto
+FUNC0164;Caio Rocha Dias;Masculino;35;Solteiro(a);Mestrado;Financeiro;Gerente Financeiro;10410;10/05/2017;9.4;Ativo(a);4;4;Sim;17;5;Médio
+FUNC0165;Valentina Pinto Cavalcanti;Feminino;36;Divorciado(a);Pós-graduação;Operações;Analista de Operações;4860;03/10/2019;7.0;Desligado(a);2;15;Não;21;2;Médio
+FUNC0166;Matheus Barros Ribeiro;Masculino;38;Casado(a);Graduação;Atendimento;Analista de Atendimento;4370;10/07/2017;9.2;Ativo(a);2;9;Não;0;5;Alto
+FUNC0167;Letícia Costa Carvalho;Feminino;39;Casado(a);Pós-graduação;Financeiro;Analista Financeiro;5670;07/01/2022;4.7;Desligado(a);3;10;Não;25;2;Alto
+FUNC0168;Igor Rocha Teixeira;Masculino;20;Solteiro(a);Pós-graduação;Financeiro;Gerente Financeiro;13390;14/08/2025;1.1;Ativo(a);4;2;Não;10;2;Alto
+FUNC0169;Mariana Azevedo Almeida;Feminino;27;Casado(a);Pós-graduação;Financeiro;Assistente Financeiro;4020;28/10/2017;8.9;Ativo(a);3;8;Não;25;4;Alto
+FUNC0170;Marina Lima Pereira;Feminino;36;Solteiro(a);Mestrado;Vendas;Gerente de Vendas;8810;10/12/2018;7.8;Ativo(a);5;1;Não;43;2;Médio
+FUNC0171;Julia Freitas Araújo;Feminino;33;União Estável;Graduação;Operações;Supervisor de Operações;7570;22/08/2025;1.1;Desligado(a);4;2;Não;13;2;Alto
+FUNC0172;Daniela Martins Azevedo;Feminino;35;Solteiro(a);Pós-graduação;Marketing;Assistente de Marketing;3070;30/08/2025;1.1;Desligado(a);4;0;Não;42;1;Baixo
+FUNC0173;Heloísa Oliveira Correia;Masculino;23;Casado(a);Mestrado;TI;Analista de Suporte;4620;17/01/2022;4.7;Ativo(a);4;1;Sim;35;2;Alto
+FUNC0174;Mariana Martins Cavalcanti;Feminino;32;Casado(a);Graduação;TI;Analista de Suporte;4330;08/12/2019;6.8;Ativo(a);4;4;Não;28;5;Médio
+FUNC0175;Paulo Almeida Moura;Masculino;24;Casado(a);Mestrado;TI;Analista de Suporte;4460;13/11/2025;0.9;Ativo(a);4;7;Não;57;2;Alto
+FUNC0176;Aline Freitas Pereira;Feminino;33;Solteiro(a);Ensino Médio;Vendas;Vendedor Júnior;2760;20/03/2026;0.5;Ativo(a);5;1;Não;25;4;Alto
+FUNC0177;Beatriz Oliveira Vieira;Feminino;22;Casado(a);Ensino Médio;TI;Desenvolvedor Júnior;4410;08/08/2017;9.1;Ativo(a);2;6;Não;12;4;Alto
+FUNC0178;Daniela Cardoso Moura;Feminino;27;Casado(a);Ensino Médio;TI;Desenvolvedor Sênior;11580;19/10/2019;7.0;Ativo(a);4;3;Sim;10;4;Alto
+FUNC0179;Fernanda Rocha Correia;Feminino;18;Casado(a);Graduação;TI;Desenvolvedor Pleno;9620;11/06/2018;8.3;Ativo(a);5;3;Sim;33;2;Alto
+FUNC0180;Vinícius Oliveira Moreira;Masculino;28;Solteiro(a);Pós-graduação;Vendas;Gerente de Vendas;8670;24/11/2024;1.8;Desligado(a);3;2;Não;11;3;Alto
+FUNC0181;Letícia Silva Carvalho;Feminino;43;Casado(a);Graduação;Atendimento;Supervisor de Atendimento;6610;28/08/2018;8.1;Ativo(a);4;5;Sim;3;3;Baixo
+FUNC0182;Theo Correia Freitas;Masculino;42;Solteiro(a);Graduação;TI;Desenvolvedor Júnior;4090;02/03/2022;4.6;Ativo(a);2;6;Não;52;3;Alto
+FUNC0183;Julia Almeida Ribeiro;Feminino;27;Divorciado(a);Graduação;RH;Analista de RH;5490;31/12/2017;8.8;Ativo(a);4;2;Não;21;5;Médio
+FUNC0184;Julia Vieira Azevedo;Feminino;30;União Estável;Ensino Médio;Atendimento;Atendente;2460;21/02/2017;9.6;Ativo(a);4;7;Não;52;5;Médio
+FUNC0185;Gael Santos Fernandes;Masculino;37;Solteiro(a);Pós-graduação;RH;Analista de RH;5660;29/12/2020;5.8;Ativo(a);2;15;Não;33;3;Baixo
+FUNC0186;Lorena Lima Martins;Feminino;40;Solteiro(a);Pós-graduação;TI;Analista de Suporte;3610;22/05/2024;2.4;Ativo(a);2;9;Não;33;3;Médio
+FUNC0187;Aline Rocha Pinto;Feminino;37;Casado(a);Ensino Médio;Vendas;Vendedor Pleno;4110;05/10/2018;8.0;Desligado(a);4;7;Não;17;2;Médio
+FUNC0188;Eduardo Ribeiro Ferreira;Masculino;38;Casado(a);Ensino Médio;Atendimento;Supervisor de Atendimento;6610;29/06/2020;6.3;Ativo(a);3;8;Não;13;1;Baixo
+FUNC0189;Gabriela Barbosa Rocha;Feminino;26;Solteiro(a);Graduação;Atendimento;Atendente;2800;12/06/2024;2.3;Ativo(a);5;0;Sim;38;3;Baixo
+FUNC0190;Arthur Pereira Fernandes;Masculino;25;Divorciado(a);Pós-graduação;Operações;Auxiliar Operacional;2030;01/01/2019;7.7;Ativo(a);3;10;Não;14;3;Baixo
+FUNC0191;Priscila Mendes Carvalho;Feminino;28;Divorciado(a);Mestrado;Vendas;Vendedor Júnior;2640;05/06/2024;2.3;Ativo(a);4;0;Sim;35;1;Médio
+FUNC0192;Rafael Moreira Dias;Masculino;34;Solteiro(a);Pós-graduação;Atendimento;Analista de Atendimento;3700;24/08/2024;2.1;Ativo(a);1;15;Não;24;3;Médio
+FUNC0193;Rodrigo Nunes Carvalho;Masculino;39;União Estável;Graduação;TI;Desenvolvedor Sênior;15590;13/01/2026;0.7;Ativo(a);4;3;Não;0;3;Baixo
+FUNC0194;Vanessa Martins Cavalcanti;Feminino;23;União Estável;Pós-graduação;Atendimento;Atendente;2500;18/04/2020;6.5;Ativo(a);4;8;Não;53;4;Alto
+FUNC0195;Laura Oliveira Santos;Feminino;35;Divorciado(a);Mestrado;Vendas;Gerente de Vendas;8810;14/03/2025;1.5;Ativo(a);3;10;Não;27;1;Baixo
+FUNC0196;Otávio Costa Pinto;Masculino;18;Solteiro(a);Pós-graduação;Atendimento;Atendente;2740;24/03/2022;4.5;Ativo(a);4;0;Não;49;3;Alto
+FUNC0197;Vinícius Martins Pereira;Masculino;31;Divorciado(a);Pós-graduação;TI;Desenvolvedor Júnior;4350;23/03/2023;3.5;Ativo(a);4;0;Sim;48;4;Alto
+FUNC0198;Priscila Martins Fernandes;Feminino;35;Divorciado(a);Graduação;Marketing;Assistente de Marketing;3400;13/12/2022;3.8;Ativo(a);4;6;Não;19;2;Alto
+FUNC0199;Fernando Araújo Martins;Masculino;28;Casado(a);Ensino Médio;TI;Desenvolvedor Pleno;9160;14/02/2026;0.6;Ativo(a);3;9;Não;54;4;Alto
+FUNC0200;Beatriz Souza Azevedo;Feminino;31;Solteiro(a);Graduação;Vendas;Vendedor Júnior;3350;11/05/2023;3.4;Desligado(a);1;10;Não;26;4;Médio

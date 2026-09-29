@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glossário - Administração Financeira</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: Arial, Helvetica, sans-serif; margin: 0; padding: 24px; background: #f8fafc; color: #111827; }
+  .container { max-width: 1200px; margin: 0 auto; background: #ffffff; padding: 24px; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+  h1 { margin: 0 0 8px 0; font-size: 1.6rem; }
+  h2 { margin: 24px 0 8px 0; font-size: 1.1rem; }
+  p.sub { margin: 0 0 16px 0; color: #4b5563; }
+  p.nota { margin: 16px 0 0 0; color: #4b5563; font-size: 0.85rem; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+  thead th { background: #1f2937; color: #ffffff; text-align: left; padding: 12px 10px; }
+  tbody td { padding: 10px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+  tbody tr:nth-child(odd) { background: #ffffff; }
+  tbody tr:nth-child(even) { background: #f3f4f6; }
+  td.conceito { font-weight: bold; }
+  td.subarea { white-space: nowrap; }
+  td.ano { white-space: nowrap; text-align: center; }
+  ol.fontes { font-size: 0.85rem; color: #1f2937; }
+  ol.fontes a { color: #1d4ed8; word-break: break-all; }
+  @media (max-width: 700px) {
+    body { padding: 12px; }
+    .container { padding: 16px; }
+    table, thead, tbody, th, td, tr { display: block; }
+    thead { display: none; }
+    tbody tr { margin-bottom: 12px; border: 1px solid #e5e7eb; border-radius: 6px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Glossário de Administração Financeira</h1>
+<p class="sub">12 conceitos centrais distribuídos em 6 subáreas: Orçamento, Tesouraria / Caixa, Investimentos, Financiamento, Custos e Riscos.</p>
+<table>
+<thead>
+<tr>
+<th>Nº</th>
+<th>Conceito</th>
+<th>Ano de Origem</th>
+<th>Autor de Referência</th>
+<th>Subárea</th>
+<th>Definição</th>
+<th>Exemplo Brasileiro</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td class="conceito">Orçamento Empresarial</td>
+<td class="ano">1921</td>
+<td>—</td>
+<td class="subarea">Orçamento</td>
+<td>É o plano financeiro que estima receitas, despesas e investimentos para um período futuro. Serve para orientar decisões e controlar o desempenho financeiro.</td>
+<td>Magazine Luiza elabora orçamento anual para planejar abertura de lojas e investimento em e-commerce.</td>
+</tr>
+<tr>
+<td>2</td>
+<td class="conceito">Fluxo de Caixa Projetado</td>
+<td class="ano">1971</td>
+<td>—</td>
+<td class="subarea">Orçamento</td>
+<td>É a previsão das entradas e saídas futuras de caixa em um horizonte de tempo. Permite antecipar sobras ou faltas de recursos e planejar medidas corretivas.</td>
+<td>Uma padaria em São Paulo projeta o fluxo dos próximos três meses para garantir o pagamento de fornecedores no período de menor venda.</td>
+</tr>
+<tr>
+<td>3</td>
+<td class="conceito">Capital de Giro</td>
+<td class="ano">1920</td>
+<td>—</td>
+<td class="subarea">Tesouraria / Caixa</td>
+<td>É o recurso necessário para sustentar a operação diária, calculado como ativo circulante menos passivo circulante. Garante o pagamento de salários, estoques e contas de curto prazo.</td>
+<td>A Natura gerencia capital de giro para manter a produção de cosméticos entre o pagamento de insumos e o recebimento das consultoras.</td>
+</tr>
+<tr>
+<td>4</td>
+<td class="conceito">Ciclo de Caixa</td>
+<td class="ano">1980</td>
+<td>Richards e Laughlin</td>
+<td class="subarea">Tesouraria / Caixa</td>
+<td>É o intervalo entre o pagamento aos fornecedores e o recebimento das vendas. Quanto menor o ciclo, menor a necessidade de financiamento da operação.</td>
+<td>A Ambev negocia prazos maiores com fornecedores de cevada e recebe à vista de distribuidores para encurtar o ciclo de caixa.</td>
+</tr>
+<tr>
+<td>5</td>
+<td class="conceito">Valor Presente Líquido (VPL)</td>
+<td class="ano">1907</td>
+<td>—</td>
+<td class="subarea">Investimentos</td>
+<td>É a diferença entre o valor presente das entradas futuras de caixa e o investimento inicial. Se for positivo, o projeto cria valor e deve ser aceito.</td>
+<td>A Petrobras calcula o VPL de um novo campo no pré-sal para decidir se o investimento é viável.</td>
+</tr>
+<tr>
+<td>6</td>
+<td class="conceito">Taxa Interna de Retorno (TIR)</td>
+<td class="ano">1936</td>
+<td>—</td>
+<td class="subarea">Investimentos</td>
+<td>É a taxa de desconto que iguala o VPL a zero, representando a rentabilidade do projeto. O projeto é atrativo quando a TIR supera o custo de capital.</td>
+<td>A Eletrobras usa a TIR para comparar a construção de uma usina solar no Nordeste com outras aplicações.</td>
+</tr>
+<tr>
+<td>7</td>
+<td class="conceito">Custo Médio Ponderado de Capital (WACC)</td>
+<td class="ano">1958</td>
+<td>Modigliani e Miller</td>
+<td class="subarea">Financiamento</td>
+<td>É o custo médio das fontes de financiamento da empresa, ponderando capital próprio e de terceiros. Serve como taxa mínima exigida para aprovar investimentos.</td>
+<td>A Vale utiliza o WACC como taxa de corte na avaliação de projetos de mineração em Minas Gerais.</td>
+</tr>
+<tr>
+<td>8</td>
+<td class="conceito">Alavancagem Financeira</td>
+<td class="ano">1958</td>
+<td>—</td>
+<td class="subarea">Financiamento</td>
+<td>É o uso de capital de terceiros para ampliar o retorno sobre o capital próprio. Aumenta o lucro potencial, mas também eleva o risco de endividamento.</td>
+<td>A JBS capta debêntures no mercado brasileiro para expandir frigoríficos, buscando retorno superior ao juro pago.</td>
+</tr>
+<tr>
+<td>9</td>
+<td class="conceito">Margem de Contribuição</td>
+<td class="ano">1936</td>
+<td>—</td>
+<td class="subarea">Custos</td>
+<td>É a diferença entre a receita de venda e os custos e despesas variáveis. Indica quanto cada unidade contribui para cobrir custos fixos e gerar lucro.</td>
+<td>Uma confecção em Fortaleza calcula a margem de contribuição de cada bermuda para definir o mix mais lucrativo.</td>
+</tr>
+<tr>
+<td>10</td>
+<td class="conceito">Ponto de Equilíbrio</td>
+<td class="ano">1930</td>
+<td>—</td>
+<td class="subarea">Custos</td>
+<td>É o nível de vendas em que a receita total iguala os custos totais, sem lucro nem prejuízo. Serve para definir a meta mínima de vendas necessária.</td>
+<td>Um restaurante em Belo Horizonte calcula quantas refeições precisa vender por mês para cobrir aluguel e salários.</td>
+</tr>
+<tr>
+<td>11</td>
+<td class="conceito">Risco de Crédito</td>
+<td class="ano">1974</td>
+<td>Merton</td>
+<td class="subarea">Riscos</td>
+<td>É a possibilidade de perda por inadimplência de clientes ou contrapartes. Exige análise de crédito e políticas de cobrança para ser mitigado.</td>
+<td>O Nubank avalia score e histórico no Serasa antes de aprovar limite de cartão para reduzir calotes.</td>
+</tr>
+<tr>
+<td>12</td>
+<td class="conceito">Risco de Liquidez</td>
+<td class="ano">1936</td>
+<td>—</td>
+<td class="subarea">Riscos</td>
+<td>É o risco de a empresa não ter caixa suficiente para honrar obrigações de curto prazo. Ocorre mesmo em empresas lucrativas quando há descasamento de prazos.</td>
+<td>Uma construtora no Rio de Janeiro com muitos recebíveis parcelados mantém reserva em Tesouro Selic para pagar salários em dia.</td>
+</tr>
+</tbody>
+</table>
+<p class="nota">Nota: os anos indicam o marco de formalização moderna de cada conceito. Autores preenchidos apenas para 3 conceitos; os demais (—) ficam para você conferir e completar.</p>
+<h2>Onde conferi — fontes dos 3 autores</h2>
+<ol class="fontes">
+<li><strong>Ciclo de Caixa (1980) — Richards e Laughlin:</strong> Richards, V.D. e Laughlin, E.J. (1980). A Cash Conversion Cycle Approach to Liquidity Analysis. Financial Management, v.9, n.1, p.32-38. Conferido em JSTOR: <a href="https://www.jstor.org/stable/3665310">https://www.jstor.org/stable/3665310</a> e resumo em SciELO Colombia.</li>
+<li><strong>WACC / Estrutura de capital (1958) — Modigliani e Miller:</strong> Modigliani, F. e Miller, M.H. (1958). The Cost of Capital, Corporation Finance and the Theory of Investment. American Economic Review, v.48, n.3, p.261-297. Conferido em JSTOR: <a href="https://www.jstor.org/stable/1809766">https://www.jstor.org/stable/1809766</a> e PDF da American Economic Association: <a href="https://www.aeaweb.org/aer/top20/48.3.261-297.pdf">https://www.aeaweb.org/aer/top20/48.3.261-297.pdf</a>.</li>
+<li><strong>Risco de Crédito — modelo estrutural (1974) — Merton:</strong> Merton, R.C. (1974). On the Pricing of Corporate Debt: The Risk Structure of Interest Rates. Journal of Finance, v.29, n.2, p.449-470. Conferido em JSTOR: <a href="https://www.jstor.org/stable/2978814">https://www.jstor.org/stable/2978814</a>, Wiley: <a href="https://onlinelibrary.wiley.com/doi/10.1111/j.1540-6261.1974.tb03058.x">https://onlinelibrary.wiley.com/doi/10.1111/j.1540-6261.1974.tb03058.x</a> e Harvard Business School: <a href="https://www.hbs.edu/faculty/Pages/item.aspx?num=8798">https://www.hbs.edu/faculty/Pages/item.aspx?num=8798</a>.</li>
+</ol>
+</div>
+</body>
+</html>

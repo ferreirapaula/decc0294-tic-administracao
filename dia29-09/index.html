@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>People Analytics — Dashboard de RH</title>
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="rh_data.js"></script>
+<style>
+:root{
+  --bg:#f4f6fb; --card:#ffffff; --ink:#0f172a; --muted:#64748b; --line:#e5e9f2;
+  --brand:#4f46e5; --brand2:#7c3aed; --green:#16a34a; --red:#dc2626; --amber:#d97706;
+  --radius:16px; --shadow:0 1px 2px rgba(15,23,42,.05),0 8px 24px -12px rgba(15,23,42,.18);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+.app{display:flex;min-height:100vh}
+/* ---- sidebar ---- */
+aside{width:248px;background:#0f172a;color:#e2e8f0;position:sticky;top:0;height:100vh;padding:22px 16px;display:flex;flex-direction:column;gap:6px;flex-shrink:0}
+.brand{display:flex;align-items:center;gap:10px;padding:4px 8px 16px}
+.brand .logo{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--brand2));display:grid;place-items:center;font-weight:900;font-size:18px}
+.brand b{font-size:15px;display:block}.brand span{font-size:11px;color:#94a3b8}
+.nav{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#94a3b8;margin:12px 8px 6px}
+aside a{display:flex;align-items:center;gap:10px;color:#cbd5e1;text-decoration:none;padding:10px 12px;border-radius:10px;font-size:14px}
+aside a:hover,aside a.active{background:#1e293b;color:#fff}
+.side-foot{margin-top:auto;font-size:11px;color:#94a3b8;padding:10px 8px;line-height:1.5}
+/* ---- main ---- */
+main{flex:1;min-width:0}
+.topbar{position:sticky;top:0;z-index:20;background:rgba(244,246,251,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:14px 28px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.topbar h1{font-size:18px;margin:0}
+.topbar .sub{font-size:12px;color:var(--muted)}
+.search{margin-left:auto;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.search input,.search select{padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;font-size:13px}
+.btn{padding:9px 14px;border-radius:10px;border:1px solid var(--line);background:#fff;font-weight:700;font-size:13px;cursor:pointer}
+.btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}
+.btn:hover{filter:brightness(.97)}
+.content{padding:22px 28px 40px;max-width:1240px}
+.sec-title{display:flex;align-items:baseline;gap:10px;margin:26px 2px 12px}
+.sec-title h2{font-size:16px;margin:0}.sec-title span{font-size:12px;color:var(--muted)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:12px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:14px 16px;position:relative;overflow:hidden}
+.kpi::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--c,var(--brand))}
+.kpi small{font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:800}
+.kpi .v{font-size:22px;font-weight:800;margin-top:2px}
+.kpi .d{font-size:11.5px;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:1000px){.grid2,.grid3{grid-template-columns:1fr}aside{display:none}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px}
+.card h3{margin:0;font-size:14.5px}.card p.sub{margin:4px 0 12px;font-size:12.5px;color:var(--muted)}
+.empty{padding:22px;text-align:center;color:var(--muted);font-size:13px;border:1px dashed var(--line);border-radius:12px}
+.tooltip{position:fixed;pointer-events:none;background:#0f172a;color:#fff;padding:9px 12px;border-radius:10px;font-size:12.5px;opacity:0;transition:opacity .12s;z-index:99;max-width:300px;line-height:1.5;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+table{width:100%;border-collapse:collapse;font-size:12.8px}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
+th{background:#f8fafc;font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);position:sticky;top:0;cursor:pointer;user-select:none}
+th:hover{color:var(--ink)}
+td.num,th.num{text-align:right}
+.twrap{max-height:420px;overflow:auto;border:1px solid var(--line);border-radius:12px}
+.badge{padding:3px 10px;border-radius:99px;font-size:11.5px;font-weight:800}
+.ativo{background:#dcfce7;color:#166534}.deslig{background:#fee2e2;color:#991b1b}
+.pager{display:flex;align-items:center;gap:10px;margin-top:10px;font-size:12.5px;color:var(--muted)}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-top:8px}
+.legend i{width:10px;height:10px;border-radius:3px;display:inline-block;margin-right:5px}
+.bar:hover,.dot:hover{opacity:.78}
+footer{text-align:center;color:#94a3b8;font-size:11.5px;padding:18px}
+</style>
+</head>
+<body>
+<div class="app">
+<aside>
+  <div class="brand"><div class="logo">PA</div><div><b>People Analytics</b><span>RH · Empresa Fictícia</span></div></div>
+  <div class="nav">Principal</div>
+  <a href="#visao" class="active">📊 Visão geral</a>
+  <a href="#salarios">💰 Salários e cargos</a>
+  <a href="#desempenho">⭐ Desempenho</a>
+  <a href="#equipe">👥 Colaboradores</a>
+  <div class="nav">Sistema</div>
+  <a href="#" id="navExport">⬇ Exportar recorte (CSV)</a>
+  <a href="#" id="navReset">↺ Limpar filtros</a>
+  <div class="side-foot">Base: <b>rh_funcionarios.csv</b><br>200 registros · D3.js v7<br>Salários preservados do cadastro.</div>
+</aside>
+<main>
+  <div class="topbar">
+    <div><h1>Dashboard principal de RH</h1><div class="sub" id="resumoTopo">—</div></div>
+    <div class="search">
+      <input id="q" placeholder="🔎 Buscar nome, cargo, ID…" style="min-width:230px">
+      <select id="fDep"><option value="">Todos os departamentos</option></select>
+      <select id="fStatus"><option value="">Status: todos</option><option>Ativo(a)</option><option>Desligado(a)</option></select>
+      <select id="fSexo"><option value="">Sexo: todos</option><option>Feminino</option><option>Masculino</option></select>
+    </div>
+  </div>
+  <div class="content">
+    <!-- VISÃO GERAL -->
+    <div class="sec-title" id="visao"><h2>Visão geral</h2><span>indicadores do recorte atual</span></div>
+    <div class="kpis" id="kpis"></div>
+    <div class="grid2" style="margin-top:14px">
+      <div class="card"><h3>Composição por departamento</h3><p class="sub">Headcount no recorte · clique na legenda não necessário, use filtros no topo</p><div id="chDep"></div></div>
+      <div class="card"><h3>Turnover — ativos × desligados</h3><p class="sub">Passe o mouse nas fatias para detalhes</p><div id="chDonut"></div><div class="legend" id="legDonut"></div></div>
+    </div>
+    <!-- SALÁRIOS (seção revisada) -->
+    <div class="sec-title" id="salarios"><h2>Salários e cargos — seção revisada e corrigida</h2><span>valores idênticos ao cadastro</span></div>
+    <div class="kpis" id="kpisSal"></div>
+    <div class="grid2" style="margin-top:14px">
+      <div class="card"><h3>Salário médio por departamento</h3><p class="sub">Média aritmética · rótulos em R$ · ordenado do maior para o menor</p><div id="chSalMed"></div></div>
+      <div class="card"><h3>Faixa salarial por departamento</h3><p class="sub">Mínimo — mediana — máximo · ponto = mediana, barra = amplitude total</p><div id="chFaixa"></div></div>
+    </div>
+    <div class="grid2" style="margin-top:14px">
+      <div class="card"><h3>Distribuição salarial (histograma)</h3><p class="sub">Faixas de R$ 2.000 · mostra concentração da folha</p><div id="chHist"></div></div>
+      <div class="card"><h3>Salário × tempo de empresa</h3><p class="sub">Cada ponto = 1 funcionário · cor = departamento · tamanho = avaliação</p><div id="chScatter"></div></div>
+    </div>
+    <div class="card" style="margin-top:14px"><h3>Tabela salarial por cargo (auditoria)</h3><p class="sub">Calculada dos salários cadastrados · clique no cabeçalho para ordenar · n = nº de pessoas</p><div class="twrap"><table><thead><tr><th data-k="departamento">Departamento</th><th data-k="cargo">Cargo</th><th class="num" data-k="n">N</th><th class="num" data-k="media">Média</th><th class="num" data-k="mediana">Mediana</th><th class="num" data-k="min">Mín</th><th class="num" data-k="max">Máx</th></tr></thead><tbody id="tbSal"></tbody></table></div></div>
+    <!-- DESEMPENHO -->
+    <div class="sec-title" id="desempenho"><h2>Desempenho, satisfação e engajamento</h2><span>recorte atual</span></div>
+    <div class="grid3">
+      <div class="card"><h3>Avaliação (1–5)</h3><p class="sub">Distribuição das notas</p><div id="chAval"></div></div>
+      <div class="card"><h3>Satisfação (1–5)</h3><p class="sub">Distribuição das notas</p><div id="chSat"></div></div>
+      <div class="card"><h3>Engajamento</h3><p class="sub">Baixo · Médio · Alto</p><div id="chEng"></div></div>
+    </div>
+    <!-- EQUIPE -->
+    <div class="sec-title" id="equipe"><h2>Colaboradores</h2><span id="countTab">—</span></div>
+    <div class="card"><div class="twrap"><table><thead><tr><th>ID</th><th>Nome</th><th>Departamento</th><th>Cargo</th><th class="num">Salário</th><th>Status</th><th class="num">Aval.</th><th class="num">Satisf.</th><th class="num">Tempo (a)</th></tr></thead><tbody id="tbMain"></tbody></table></div>
+    <div class="pager"><button class="btn" id="prev">‹ Anterior</button><span id="pgInfo"></span><button class="btn" id="next">Próxima ›</button><span style="margin-left:auto" id="folhaInfo"></span></div></div>
+    <footer>Fonte: rh_funcionarios.csv · Gráficos em D3.js · Layout reformulado — sidebar, cards, hierarquia e responsivo.</footer>
+  </div>
+</main>
+</div>
+<div class="tooltip" id="tip"></div>
+<script>
+const BRL = v => "R$ " + Math.round(Number(v)||0).toLocaleString("pt-BR");
+const tip = d3.select("#tip");
+const showTip=(h,ev)=>tip.html(h).style("opacity",1).style("left",(ev.clientX+14)+"px").style("top",(ev.clientY+14)+"px");
+const hideTip=()=>tip.style("opacity",0);
+const median=a=>{a=[...a].sort((x,y)=>x-y);const n=a.length;if(!n)return 0;return n%2?a[(n-1)/2]:(a[n/2-1]+a[n/2])/2;};
+
+// filtros
+const deps=[...new Set(RH_DATA.map(d=>d.departamento))].sort();
+d3.select("#fDep").selectAll("option.d").data(deps).join("option").attr("class","d").attr("value",d=>d).text(d=>d);
+const COLORS=d3.scaleOrdinal().domain(deps).range(["#4f46e5","#06b6d4","#16a34a","#f59e0b","#ef4444","#8b5cf6","#ec4899"]);
+let page=0; const PER=50; let sortSal={k:"media",asc:false};
+
+function base(){
+  const q=document.getElementById("q").value.trim().toLowerCase();
+  const dep=document.getElementById("fDep").value, st=document.getElementById("fStatus").value, sx=document.getElementById("fSexo").value;
+  return RH_DATA.filter(d=>{
+    if(dep&&d.departamento!==dep)return false;
+    if(st&&d.status!==st)return false;
+    if(sx&&d.sexo!==sx)return false;
+    if(q&&!(String(d.nome).toLowerCase().includes(q)||String(d.cargo).toLowerCase().includes(q)||String(d.id).toLowerCase().includes(q)))return false;
+    return true;
+  });
+}
+const salOf=d=>Number(d.salario)||0;
+
+function kpis(){
+  const d=base(), n=d.length;
+  const at=d.filter(x=>x.status==="Ativo(a)").length;
+  const turn=n?(n-at)/n*100:0;
+  const sals=d.map(salOf);
+  const folha=d3.sum(sals), media=n?d3.mean(sals):0, med=median(sals);
+  const sat=n?d3.mean(d,x=>x.satisfacao):0, av=n?d3.mean(d,x=>x.avaliacao):0;
+  d3.select("#resumoTopo").text(`Exibindo ${n} de ${RH_DATA.length} funcionários · folha do recorte ${BRL(folha)}`);
+  const K=[["Headcount",n,"— pessoas no recorte","#4f46e5"],["Ativos",at,`${n?at/n*100:0 .toFixed? "":""}${(n?at/n*100:0).toFixed(1)}% do recorte`,"#16a34a"],["Turnover",(turn).toFixed(1)+"%","desligados no recorte","#dc2626"],["Folha salarial",BRL(folha),"soma dos salários","#7c3aed"],["Salário médio",BRL(media),"mediana "+BRL(med),"#0891b2"],["Avaliação média",(av||0).toFixed(2)+" / 5","satisfação "+(sat||0).toFixed(2)+" / 5","#d97706"]];
+  d3.select("#kpis").selectAll(".kpi").data(K).join("div").attr("class","kpi").style("--c",x=>x[3])
+    .html(x=>`<small>${x[0]}</small><div class="v">${x[1]}</div><div class="d">${x[2]}</div>`);
+  const S=[["Folha total",BRL(folha),"soma · preservada do cadastro","#7c3aed"],["Média",BRL(media),"aritmética","#4f46e5"],["Mediana",BRL(med),"ponto central (robusta)","#0891b2"],["Menor salário",BRL(d3.min(sals)??0),"piso no recorte","#16a34a"],["Maior salário",BRL(d3.max(sals)??0),"teto no recorte","#dc2626"],["Pessoas",n,"base do cálculo","#64748b"]];
+  d3.select("#kpisSal").selectAll(".kpi").data(S).join("div").attr("class","kpi").style("--c",x=>x[3])
+    .html(x=>`<small>${x[0]}</small><div class="v">${x[1]}</div><div class="d">${x[2]}</div>`);
+  return {d,n,folha};
+}
+
+function empty(sel,msg){d3.select(sel).html(`<div class="empty">${msg}</div>`);return true;}
+
+function hbarMed(){
+  const d=base().filter(x=>salOf(x)>0);
+  if(!d.length)return empty("#chSalMed","Sem dados de salário neste recorte.");
+  const rows=[...d3.rollup(d,v=>d3.mean(v,salOf),x=>x.departamento)].map(([k,v])=>({k,v,n:d.filter(x=>x.departamento===k).length})).sort((a,b)=>b.v-a.v);
+  const el=d3.select("#chSalMed");el.html("");
+  const W=460,H=Math.max(170,rows.length*38+16);
+  const svg=el.append("svg").attr("width","100%").attr("viewBox",`0 0 ${W} ${H}`);
+  const x=d3.scaleLinear().domain([0,d3.max(rows,r=>r.v)]).nice().range([150,W-96]);
+  const y=d3.scaleBand().domain(rows.map(r=>r.k)).range([8,H-8]).padding(.28);
+  svg.selectAll("rect").data(rows).join("rect").attr("class","bar").attr("x",150).attr("y",r=>y(r.k)).attr("height",y.bandwidth()).attr("rx",7)
+    .attr("width",r=>Math.max(3,x(r.v)-150)).attr("fill",r=>COLORS(r.k))
+    .on("mousemove",(ev,r)=>showTip(`<b>${r.k}</b><br>Média: <b>${BRL(r.v)}</b><br>${r.n} pessoa(s)`,ev)).on("mouseleave",hideTip);
+  svg.selectAll("text.l").data(rows).join("text").attr("x",0).attr("y",r=>y(r.k)+y.bandwidth()/2+4).attr("font-size","12px").text(r=>r.k.length>19?r.k.slice(0,18)+"…":r.k);
+  svg.selectAll("text.v").data(rows).join("text").attr("x",r=>x(r.v)+7).attr("y",r=>y(r.k)+y.bandwidth()/2+4).attr("font-size","12px").attr("font-weight","800").text(r=>BRL(r.v));
+  svg.append("g").attr("transform",`translate(150,${H-2})`).call(d3.axisBottom(x).ticks(4).tickFormat(v=>"R$ "+(v/1000)+"k"));
+}
+
+function faixa(){
+  const d=base().filter(x=>salOf(x)>0);
+  if(!d.length)return empty("#chFaixa","Sem dados de salário neste recorte.");
+  const rows=[...d3.rollup(d,v=>v.map(salOf).sort((a,b)=>a-b),x=>x.departamento)].map(([k,a])=>({k,min:d3.min(a),med:median(a),max:d3.max(a)})).sort((a,b)=>b.med-a.med);
+  const el=d3.select("#chFaixa");el.html("");
+  const W=460,H=Math.max(170,rows.length*38+26);
+  const svg=el.append("svg").attr("width","100%").attr("viewBox",`0 0 ${W} ${H}`);
+  const x=d3.scaleLinear().domain([d3.min(rows,r=>r.min)*0.9,d3.max(rows,r=>r.max)*1.02]).range([150,W-70]);
+  const y=d3.scaleBand().domain(rows.map(r=>r.k)).range([8,H-22]).padding(.4);
+  svg.selectAll("line").data(rows).join("line").attr("x1",r=>x(r.min)).attr("x2",r=>x(r.max)).attr("y1",r=>y(r.k)+y.bandwidth()/2).attr("y2",r=>y(r.k)+y.bandwidth()/2).attr("stroke","#c7d2fe").attr("stroke-width",8).attr("stroke-linecap","round");
+  svg.selectAll("circle").data(rows).join("circle").attr("cx",r=>x(r.med)).attr("cy",r=>y(r.k)+y.bandwidth()/2).attr("r",6).attr("fill",r=>COLORS(r.k)).attr("stroke","#fff").attr("stroke-width",2)
+    .on("mousemove",(ev,r)=>showTip(`<b>${r.k}</b><br>Mín: ${BRL(r.min)}<br><b>Mediana: ${BRL(r.med)}</b><br>Máx: ${BRL(r.max)}`,ev)).on("mouseleave",hideTip);
+  svg.selectAll("text.l").data(rows).join("text").attr("x",0).attr("y",r=>y(r.k)+y.bandwidth()/2+4).attr("font-size","12px").text(r=>r.k.length>19?r.k.slice(0,18)+"…":r.k);
+  svg.selectAll("text.v").data(rows).join("text").attr("x",r=>x(r.max)+6).attr("y",r=>y(r.k)+y.bandwidth()/2+4).attr("font-size","11px").attr("font-weight","700").text(r=>BRL(r.med));
+}
+
+function hist(){
+  const d=base().map(salOf).filter(v=>v>0);
+  if(!d.length)return empty("#chHist","Sem dados de salário neste recorte.");
+  const el=d3.select("#chHist");el.html("");
+  const W=460,H=240,M={t:12,r:14,b:44,l:44};
+  const svg=el.append("svg").attr("width","100%").attr("viewBox",`0 0 ${W} ${H}`);
+  const bins=d3.bin().domain([0,d3.max(d)]).thresholds(d3.range(0,(d3.max(d)||18000)+2000,2000))(d);
+  const x=d3.scaleBand().domain(bins.map((b,i)=>i)).range([M.l,W-M.r]).padding(.2);
+  const y=d3.scaleLinear().domain([0,d3.max(bins,b=>b.length)]).nice().range([H-M.b,M.t]);
+  const xc=v=>(M.l+(v/(d3.max(d)||1))*(W-M.l-M.r));
+  svg.selectAll("rect").data(bins).join("rect").attr("class","bar").attr("x",(b,i)=>x(i)).attr("y",b=>y(b.length)).attr("width",x.bandwidth()).attr("height",b=>H-M.b-y(b.length)).attr("rx",5).attr("fill","#4f46e5")
+    .on("mousemove",(ev,b)=>showTip(`Faixa <b>${BRL(b.x0)} – ${BRL(b.x1)}</b><br>${b.length} funcionário(s)`,ev)).on("mouseleave",hideTip);
+  svg.append("g").attr("transform",`translate(0,${H-M.b})`).call(d3.axisBottom(d3.scaleLinear().domain([0,d3.max(d)]).range([M.l,W-M.r])).ticks(6).tickFormat(v=>"R$ "+(v/1000)+"k"));
+  svg.append("g").attr("transform",`translate(${M.l},0)`).call(d3.axisLeft(y).ticks(5));
+}
+
+function scatter(){
+  const d=base();
+  if(!d.length)return empty("#chScatter","Sem dados neste recorte.");
+  const el=d3.select("#chScatter");el.html("");
+  const W=460,H=240,M={t:12,r:14,b:40,l:58};
+  const svg=el.append("svg").attr("width","100%").attr("viewBox",`0 0 ${W} ${H}`);
+  const x=d3.scaleLinear().domain([0,d3.max(d,v=>v.tempoEmpresa)||10]).nice().range([M.l,W-M.r]);
+  const y=d3.scaleLinear().domain([0,d3.max(d,salOf)||18000]).nice().range([H-M.b,M.t]);
+  svg.append("g").attr("transform",`translate(0,${H-M.b})`).call(d3.axisBottom(x).ticks(5)).append("text").attr("x",(W)/2).attr("y",32).attr("fill","#64748b").attr("font-size","11px").text("Tempo de empresa (anos)");
+  svg.append("g").attr("transform",`translate(${M.l},0)`).call(d3.axisLeft(y).ticks(5).tickFormat(v=>"R$ "+(v/1000)+"k"));
+  svg.selectAll("circle").data(d).join("circle").attr("class","dot").attr("cx",v=>x(v.tempoEmpresa)).attr("cy",v=>y(salOf(v))).attr("r",v=>3+(+v.avaliacao||0)*1.4).attr("fill",v=>COLORS(v.departamento)).attr("opacity",.78).attr("stroke","#fff")
+    .on("mousemove",(ev,v)=>showTip(`<b>${v.nome}</b><br>${v.cargo} · ${v.departamento}<br>Salário: <b>${BRL(salOf(v))}</b><br>Tempo: ${v.tempoEmpresa}a · Aval: ${v.avaliacao}`,ev)).on("mouseleave",hideTip);
+}
+
+function donut(d){
+  const el=d3.select("#chDonut");el.html("");
+  const at=d.filter(x=>x.status==="Ativo(a)").length, off=d.length-at;
+  if(!d.length)return empty("#chDonut","Sem dados neste recorte.");
+  const W=300,H=200,r=Math.min(W,H)/2-12;
+  const svg=el.append("svg").attr("width","100%").attr("viewBox",`0 0 ${W} ${H}`).append("g").attr("transform",`translate(${W/2},${H/2})`);
+  const pie=d3.pie().value(x=>x.v)([{k:"Ativo(a)",v:at},{k:"Desligado(a)",v:off}]);
+  const arc=d3.arc().innerRadius(r*.58).outerRadius(r);
+  const col=d3.scaleOrdinal().domain(["Ativo(a)","Desligado(a)"]).range(["#16a34a","#dc2626"]);
+  svg.selectAll("path").data(pie).join("path").attr("d",arc).attr("fill",x=>col(x.data.k)).attr("stroke","#fff").attr("stroke-width",2)
+    .on("mousemove",(ev,x)=>showTip(`<b>${x.data.k}</b><br>${x.data.v} (${(x.data.v/Math.max(1,d.length)*100).toFixed(1)}%)`,ev)).on("mouseleave",hideTip);
+  svg.append("text").attr("text-anchor","middle").attr("font-weight","800").attr("font-size","20").text(d.length);
+  svg.append("text").attr("text-anchor","middle").attr("dy",16).attr("font-size","11").attr("fill","#64748b").text("no recorte");
+  d3.select("#legDonut").html(`<span><i style="background:#16a34a"></i>Ativo(a): <b>${at}</b></span><span><i style="background:#dc2626"></i>Desligado(a): <b>${off}</b></span>`);
+}
+
+function vbar(sel,d,key){
+  const el=d3.select(sel);el.html("");
+  const vals=key==="eng"?["Baixo","Médio","Alto"]:[1,2,3,4,5];
+  const rows=vals.map(v=>({k:key==="eng"?v:"Nota "+v,v:d.filter(x=>x[key]===v).length}));
+  if(!d.length)return empty(sel,"Sem dados neste recorte.");
+  const W=300,H=210,M={t:10,r:12,b:34,l:32};
+  const svg=el.append("svg").attr("width","100%").attr("viewBox",`0 0 ${W} ${H}`);
+  const x=d3.scaleBand().domain(rows.map(r=>r.k)).range([M.l,W-M.r]).padding(.3);
+  const y=d3.scaleLinear().domain([0,d3.max(rows,r=>r.v)||1]).nice().range([H-M.b,M.t]);
+  const col=d3.scaleOrdinal().domain(rows.map(r=>r.k)).range(["#dc2626","#f59e0b","#eab308","#16a34a","#15803d"]);
+  svg.selectAll("rect").data(rows).join("rect").attr("class","bar").attr("x",r=>x(r.k)).attr("y",r=>y(r.v)).attr("width",x.bandwidth()).attr("height",r=>H-M.b-y(r.v)).attr("rx",6).attr("fill",r=>key==="eng"?"#4f46e5":col(r.k))
+    .on("mousemove",(ev,r)=>showTip(`<b>${r.k}</b><br>${r.v} funcionário(s)`,ev)).on("mouseleave",hideTip);
+  svg.append("g").attr("transform",`translate(0,${H-M.b})`).call(d3.axisBottom(x));
+  svg.append("g").attr("transform",`translate(${M.l},0)`).call(d3.axisLeft(y).ticks(4));
+}
+
+function depCount(d){
+  const el=d3.select("#chDep");el.html("");
+  if(!d.length)return empty("#chDep","Sem dados neste recorte.");
+  const rows=[...d3.rollup(d,v=>v.length,x=>x.departamento)].map(([k,v])=>({k,v})).sort((a,b)=>b.v-a.v);
+  const W=460,H=Math.max(170,rows.length*36+16);
+  const svg=el.append("svg").attr("width","100%").attr("viewBox",`0 0 ${W} ${H}`);
+  const x=d3.scaleLinear().domain([0,d3.max(rows,r=>r.v)]).nice().range([150,W-60]);
+  const y=d3.scaleBand().domain(rows.map(r=>r.k)).range([8,H-8]).padding(.28);
+  svg.selectAll("rect").data(rows).join("rect").attr("class","bar").attr("x",150).attr("y",r=>y(r.k)).attr("height",y.bandwidth()).attr("rx",7).attr("width",r=>Math.max(3,x(r.v)-150)).attr("fill",r=>COLORS(r.k))
+    .on("mousemove",(ev,r)=>showTip(`<b>${r.k}</b><br>${r.v} funcionário(s)`,ev)).on("mouseleave",hideTip);
+  svg.selectAll("text.l").data(rows).join("text").attr("x",0).attr("y",r=>y(r.k)+y.bandwidth()/2+4).attr("font-size","12px").text(r=>r.k);
+  svg.selectAll("text.v").data(rows).join("text").attr("x",r=>x(r.v)+7).attr("y",r=>y(r.k)+y.bandwidth()/2+4).attr("font-size","12px").attr("font-weight","800").text(r=>r.v);
+}
+
+function tabSal(d){
+  const g=[...d3.rollup(d.filter(x=>salOf(x)>0),v=>v.map(salOf),x=>x.departamento+"||"+x.cargo)].map(([k,a])=>{
+    const [departamento,cargo]=k.split("||");a.sort((x,y)=>x-y);
+    return {departamento,cargo,n:a.length,media:d3.mean(a),mediana:median(a),min:d3.min(a),max:d3.max(a)};
+  });
+  g.sort((a,b)=>sortSal.asc?(a[sortSal.k]>b[sortSal.k]?1:-1):(a[sortSal.k]<b[sortSal.k]?1:-1));
+  d3.select("#tbSal").selectAll("tr").data(g).join("tr")
+    .html(r=>`<td>${r.departamento}</td><td>${r.cargo}</td><td class="num">${r.n}</td><td class="num"><b>${BRL(r.media)}</b></td><td class="num">${BRL(r.mediana)}</td><td class="num">${BRL(r.min)}</td><td class="num">${BRL(r.max)}</td>`);
+  if(!g.length)d3.select("#tbSal").html(`<tr><td colspan="7" style="text-align:center;color:#64748b">Sem dados salariais neste recorte.</td></tr>`);
+}
+
+function tabMain(d,folha){
+  const total=Math.max(1,Math.ceil(d.length/PER));page=Math.min(page,total-1);if(page<0)page=0;
+  const rows=d.slice(page*PER,page*PER+PER);
+  d3.select("#tbMain").selectAll("tr").data(rows).join("tr")
+    .html(v=>`<td>${v.id}</td><td>${v.nome}</td><td>${v.departamento}</td><td>${v.cargo}</td><td class="num"><b>${BRL(salOf(v))}</b></td><td><span class="badge ${String(v.status).startsWith("Ativo")?"ativo":"deslig"}">${v.status}</span></td><td class="num">${v.avaliacao}</td><td class="num">${v.satisfacao}</td><td class="num">${v.tempoEmpresa}</td>`);
+  d3.select("#countTab").text(`${d.length} colaboradores · pág. ${page+1}/${total}`);
+  d3.select("#pgInfo").text(`Página ${page+1} de ${total} · ${rows.length} linhas`);
+  d3.select("#folhaInfo").text(`Folha da página: ${BRL(d3.sum(rows,salOf))} · Folha do recorte: ${BRL(folha)}`);
+}
+
+function render(){
+  page=0; renderKeep();
+}
+function renderKeep(){
+  const {d,n,folha}=kpis();
+  donut(d);depCount(d);hbarMed();faixa();hist();scatter();
+  vbar("#chAval",d,"avaliacao");vbar("#chSat",d,"satisfacao");vbar("#chEng",d,"engajamento");
+  tabSal(d);tabMain(d,folha);
+}
+["q","fDep","fStatus","fSexo"].forEach(id=>document.getElementById(id).addEventListener("input",render));
+document.getElementById("prev").onclick=()=>{page--;const{d,folha}=kpis();tabMain(base(),folha);};
+document.getElementById("next").onclick=()=>{page++;const{d}=kpis();const b=base();const total=Math.max(1,Math.ceil(b.length/PER));if(page>=total)page=total-1;if(page<0)page=0;const f=kpis().folha;tabMain(b,f);};
+document.querySelectorAll("#tbSal th").forEach(th=>th.onclick=()=>{const k=th.dataset.k;sortSal.asc=sortSal.k===k?!sortSal.asc:false;sortSal.k=k;tabSal(base());});
+function toCSV(rows){
+  const head=["ID","Nome","Sexo","Idade","Departamento","Cargo","Salario","Status","Avaliacao","Satisfacao","TempoEmpresa"];
+  const esc=v=>`"${String(v??"").replace(/"/g,'""')}"`;
+  return head.join(";")+"\n"+rows.map(d=>[d.id,d.nome,d.sexo,d.idade,d.departamento,d.cargo,salOf(d),d.status,d.avaliacao,d.satisfacao,d.tempoEmpresa].map(esc).join(";"));
+}
+function download(){
+  const b=new Blob(["\uFEFF"+toCSV(base())],{type:"text/csv;charset=utf-8"});
+  const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="rh_recorte.csv";a.click();URL.revokeObjectURL(a.href);
+}
+document.getElementById("navExport").onclick=e=>{e.preventDefault();download();};
+document.getElementById("navReset").onclick=e=>{e.preventDefault();document.getElementById("q").value="";document.getElementById("fDep").value="";document.getElementById("fStatus").value="";document.getElementById("fSexo").value="";render();};
+document.querySelectorAll("aside a[href^='#']").forEach(a=>a.addEventListener("click",()=>document.querySelectorAll("aside a").forEach(x=>x.classList.remove("active"))+a.classList.add("active")));
+render();
+</script>
+</body>
+</html>
