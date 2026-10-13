@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top 10 Municípios do Maranhão — Transferências Constitucionais (jan–nov/2025)</title>
+<style>
+  :root {
+    --azul: #1f4e79;
+    --azul-claro: #d6e4f0;
+    --verde: #2e7d32;
+    --cinza: #555;
+    --borda: #ddd;
+  }
+  * { box-sizing: border-box; }
+  body { font-family: "Segoe UI", Arial, sans-serif; margin: 0; background: #f4f6f8; color: #222; line-height: 1.5; }
+  header { background: var(--azul); color: #fff; padding: 28px 32px; }
+  header h1 { margin: 0 0 6px; font-size: 1.6rem; }
+  header p { margin: 0; opacity: .9; font-size: .95rem; }
+  main { max-width: 980px; margin: 0 auto; padding: 24px 16px 48px; }
+  section { background: #fff; border: 1px solid var(--borda); border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+  h2 { margin: 0 0 14px; font-size: 1.15rem; color: var(--azul); border-bottom: 2px solid var(--azul-claro); padding-bottom: 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: .88rem; }
+  th, td { border: 1px solid var(--borda); padding: 8px 10px; text-align: right; }
+  th:first-child, td:first-child, th:nth-child(2), td:nth-child(2) { text-align: left; }
+  th { background: var(--azul-claro); color: #123; }
+  tr:nth-child(even) td { background: #fafbfc; }
+  .bar { height: 10px; background: var(--azul-claro); border-radius: 5px; overflow: hidden; min-width: 120px; }
+  .bar > div { height: 100%; background: var(--azul); }
+  .nota { font-size: .85rem; color: var(--cinza); }
+  footer { text-align: center; color: #777; font-size: .8rem; padding: 16px; }
+  a { color: var(--azul); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Top 10 Municípios do Maranhão — Transferências Constitucionais</h1>
+  <p>Acumulado janeiro a novembro de 2025 · Fonte oficial: Tesouro Nacional / Tesouro Transparente</p>
+</header>
+<main>
+  <section>
+    <h2>1. Metodologia</h2>
+    <p>Dataset <strong>Transferências Constitucionais para Municípios</strong> (CKAN <code>transferencias-constitucionais-para-municipios</code>, autor COINT). Arquivos mensais <code>transferenciamensalmunicipios202501</code> a <code>...202511</code>, somando 1º + 2º + 3º decêndios por município (UF = MA, 217 municípios, 38.009 linhas).</p>
+    <p>Total por município = soma de todas as rubricas <code>Transferência</code>: FPM, FPM 1%, FUNDEB, AJUSTE FUNDEB, ITR, CIDE-Combustíveis, Royalties, LC 176/2020 e IOF-Ouro. Valores pelo critério caixa (R$ 1,00), conforme metadados oficiais.</p>
+    <p class="nota"><strong>Limitação:</strong> o recurso rotulado como 202512 no portal contém na verdade o mês 11; dez/2025 ainda não estava publicado em 13/10/2026. O ranking refere-se a 11 meses, o que não altera a ordem de grandeza entre os 10 primeiros.</p>
+  </section>
+
+  <section>
+    <h2>2. Ranking — total recebido (R$)</h2>
+    <table>
+      <thead>
+        <tr><th>#</th><th>Município</th><th>Total</th><th>FPM</th><th>FUNDEB</th><th>Demais*</th><th>Participação</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>São Luís</td><td>1.872.778.509,91</td><td>830.492.298,47</td><td>886.410.612,69</td><td>155.875.598,75</td><td><div class="bar"><div style="width:100%"></div></div></td></tr>
+        <tr><td>2</td><td>São José de Ribamar</td><td>718.999.184,79</td><td>138.341.384,50</td><td>555.487.106,84</td><td>25.170.693,45</td><td><div class="bar"><div style="width:38%"></div></div></td></tr>
+        <tr><td>3</td><td>Imperatriz</td><td>529.564.164,97</td><td>138.341.384,50</td><td>363.985.911,29</td><td>27.236.869,18</td><td><div class="bar"><div style="width:28%"></div></div></td></tr>
+        <tr><td>4</td><td>Timon</td><td>484.177.985,60</td><td>138.341.384,50</td><td>324.101.493,51</td><td>21.735.107,59</td><td><div class="bar"><div style="width:26%"></div></div></td></tr>
+        <tr><td>5</td><td>Paço do Lumiar</td><td>476.507.149,43</td><td>134.576.085,27</td><td>321.325.477,62</td><td>20.605.586,54</td><td><div class="bar"><div style="width:25%"></div></div></td></tr>
+        <tr><td>6</td><td>Caxias</td><td>459.169.932,38</td><td>138.341.385,00</td><td>298.805.264,63</td><td>22.023.282,75</td><td><div class="bar"><div style="width:25%"></div></div></td></tr>
+        <tr><td>7</td><td>Codó</td><td>335.941.809,83</td><td>64.010.087,26</td><td>259.725.689,15</td><td>12.206.033,42</td><td><div class="bar"><div style="width:18%"></div></div></td></tr>
+        <tr><td>8</td><td>Açailândia</td><td>304.595.031,74</td><td>60.244.788,07</td><td>197.214.628,81</td><td>47.135.614,86</td><td><div class="bar"><div style="width:16%"></div></div></td></tr>
+        <tr><td>9</td><td>Bacabal</td><td>303.763.086,58</td><td>60.244.788,07</td><td>232.418.194,50</td><td>11.100.104,01</td><td><div class="bar"><div style="width:16%"></div></div></td></tr>
+        <tr><td>10</td><td>Grajaú</td><td>272.703.449,57</td><td>48.948.890,41</td><td>213.433.818,76</td><td>10.320.740,40</td><td><div class="bar"><div style="width:15%"></div></div></td></tr>
+      </tbody>
+    </table>
+    <p class="nota">* Demais = FPM 1%, AJUSTE FUNDEB, Royalties, ITR, CIDE-Combustíveis e LC 176/2020. Ex.: São Luís — FPM 1% R$ 91,70 mi; Royalties R$ 50,43 mi. Açailândia — Royalties R$ 36,77 mi (destaque CFEM/mineração).</p>
+  </section>
+
+  <section>
+    <h2>3. Leitura</h2>
+    <ul>
+      <li>São Luís lidera isolado: <strong>R$ 1,87 bi</strong>, cerca de 2,6x o 2º colocado.</li>
+      <li>A Região Metropolitana (São Luís, São José de Ribamar e Paço do Lumiar) ocupa 3 das 5 primeiras posições.</li>
+      <li>FPM + FUNDEB respondem por 92% a 97% do total em todos os 10 municípios.</li>
+      <li>Imperatriz, Timon e Caxias recebem o mesmo FPM (R$ 138,34 mi) — o desempate vem do FUNDEB.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>4. Fontes e reprodução</h2>
+    <p class="nota">Tesouro Transparente — <a href="https://www.tesourotransparente.gov.br/ckan/dataset/transferencias-constitucionais-para-municipios">Transferências Constitucionais para Municípios</a> · API: <code>ckan/api/3/action/package_show?id=transferencias-constitucionais-para-municipios</code> · Metadados: inclui FPM, FEX, ITR, Fundeb/Fundef, LC 87/96, CIDE, IOF-Ouro, Royalties e AFM, critério caixa, extração SIAFI. Cálculo verificado por execução local (Python, 38.009 linhas MA).</p>
+  </section>
+</main>
+<footer>Gerado em 13/10/2026 · jan–nov/2025 · valores em R$ 1,00</footer>
+</body>
+</html>

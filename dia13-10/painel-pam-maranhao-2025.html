@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PAM 2025 Maranhão - Painel - DECC0294 UFMA</title>
+<style>
+:root{--vinho:#8D0333;--dourado:#D4B277;--teal:#0AB0AB}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Segoe UI",Calibri,Arial,sans-serif;color:#333;background:#f2f2f2;padding:0 0 48px}
+header{background:var(--vinho);color:#fff;padding:26px 40px 22px}
+header h1{font-size:26px}
+header p{margin-top:6px;font-size:15px;color:#f1d9e2}
+.filete{height:10px;background:var(--dourado)}
+main{max-width:1060px;margin:26px auto;padding:0 20px}
+.cartoes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.cartao{background:#fff;border:1px solid #e0e0e0;border-top:5px solid var(--vinho);padding:18px 20px}
+.cartao .rot{font-size:13px;font-weight:700;letter-spacing:1px;color:var(--vinho);text-transform:uppercase}
+.cartao .numero{font-size:34px;font-weight:700;color:#1a1a1a;margin-top:6px}
+.cartao .un{font-size:14px;font-weight:400;color:#666}
+.cartao .comp{font-size:14px;margin-top:8px;color:#555}
+.cartao .conc{font-size:15px;margin-top:12px;color:#1a1a1a;line-height:1.45}
+.cartao .periodo{font-size:13px;margin-top:10px;color:#777}
+.bloco{background:#fff;border:1px solid #e0e0e0;padding:22px 24px;margin-top:22px}
+.bloco h2{font-size:19px;color:var(--vinho);margin-bottom:8px}
+.bloco p.sub{font-size:14px;color:#555;margin-bottom:14px}
+.grafico svg{width:100%;height:auto}
+.grafico .cat{font-size:14px;fill:#333;text-anchor:end}
+.grafico .val{font-size:14px;fill:#1a1a1a;font-weight:700}
+.nota{font-size:13px;color:#777;margin-top:12px}
+table{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px}
+th{background:var(--vinho);color:#fff;text-align:left;padding:9px 10px}
+td{padding:8px 10px;border-bottom:1px solid #eee;vertical-align:top}
+tr:nth-child(even) td{background:#fafafa}
+.num{text-align:right;white-space:nowrap}
+footer{max-width:1060px;margin:22px auto 0;padding:0 20px;font-size:13px;color:#777}
+</style>
+</head>
+<body>
+<div class="filete"></div>
+<header>
+<h1>PAM 2025 — Maranhão</h1>
+<p>DECC0294 · Produção Agrícola Municipal · IBGE/SIDRA via API · Tabelas 1612 e 1613</p>
+<p>Atualizado em 13/10/2026 · Valores em mil reais correntes · Ano de referência 2025</p>
+</header>
+<main>
+<div class="cartoes">
+<article class="cartao">
+<span class="rot">Valor total</span>
+<p class="numero">R$ 13,94 <span class="un">bilhões</span></p>
+<p class="comp">temporária R$ 13,77 bi (98,8%) + permanente R$ 0,16 bi (1,2%)</p>
+<p class="conc">A agricultura do MA em 2025 vale R$ 13,94 bi, quase toda de lavoura temporária.</p>
+<p class="periodo">2025 · Fonte: SIDRA t1612+t1613 n3/21 v215 p2025</p>
+</article>
+<article class="cartao">
+<span class="rot">Concentração soja + milho</span>
+<p class="numero">86,4% <span class="un">do valor temporário</span></p>
+<p class="comp">soja 64,8% (R$ 8,92 bi) + milho 21,6% (R$ 2,98 bi)</p>
+<p class="conc">Soja e milho concentram receita, área e risco. Queda nesses dois contamina o total.</p>
+<p class="periodo">2025 · Fonte: SIDRA t1612 n3/21 v215 p2025 c81/all</p>
+</article>
+<article class="cartao">
+<span class="rot">Área plantada</span>
+<p class="numero">2,19 <span class="un">milhões ha</span></p>
+<p class="comp">colhida 2,19 M ha · perda 0,26% (5.773 ha)</p>
+<p class="conc">Soja ocupa 1,37 M ha (63%) e milho 0,54 M ha (25%). Perda colheita mínima em 2025.</p>
+<p class="periodo">2025 · Fonte: SIDRA t1612 n3/21 v109 p2025</p>
+</article>
+</div>
+
+<section class="bloco">
+<h2>Valor da produção temporária por produto — Maranhão 2025 (R$ mil)</h2>
+<p class="sub">Ordenado do maior para o menor. Total temporário: 13.773.322 mil reais.</p>
+<div class="grafico">
+<svg viewBox="0 0 900 380" role="img" aria-label="Valor por produto">
+<text x="238" y="33" class="cat">Soja</text><rect x="250" y="10" width="530" height="34" fill="#8D0333"></rect><text x="790" y="33" class="val">8.921.025</text>
+<text x="238" y="81" class="cat">Milho</text><rect x="250" y="58" width="176.8" height="34" fill="#BDBDBD"></rect><text x="436.8" y="81" class="val">2.975.809</text>
+<text x="238" y="129" class="cat">Cana-de-açúcar</text><rect x="250" y="106" width="46.3" height="34" fill="#BDBDBD"></rect><text x="306.3" y="129" class="val">778.886</text>
+<text x="238" y="177" class="cat">Arroz</text><rect x="250" y="154" width="18.1" height="34" fill="#BDBDBD"></rect><text x="278.1" y="177" class="val">305.535</text>
+<text x="238" y="225" class="cat">Algodão herbáceo</text><rect x="250" y="202" width="17.8" height="34" fill="#BDBDBD"></rect><text x="277.8" y="225" class="val">299.591</text>
+<text x="238" y="273" class="cat">Mandioca</text><rect x="250" y="250" width="13.7" height="34" fill="#BDBDBD"></rect><text x="273.7" y="273" class="val">230.614</text>
+<text x="238" y="321" class="cat">Feijão</text><rect x="250" y="298" width="7.2" height="34" fill="#BDBDBD"></rect><text x="267.2" y="321" class="val">121.969</text>
+<text x="238" y="369" class="cat">Abacaxi*</text><rect x="250" y="346" width="4.1" height="34" fill="#BDBDBD"></rect><text x="264.1" y="369" class="val">69.234</text>
+</svg>
+</div>
+<p class="nota">* Abacaxi em mil frutos. Barra em vinho = maior do conjunto. Fonte: apisidra.ibge.gov.br/values/t/1612/n3/21/v/215/p/2025/c81/all</p>
+</section>
+
+<section class="bloco">
+<h2>Quantidade e rendimento — principais grãos</h2>
+<table>
+<thead><tr><th>Produto</th><th class="num">Quantidade (t)</th><th class="num">Área (ha)</th><th class="num">Rendimento (kg/ha)</th><th class="num">Preço implícito (R$/t)</th></tr></thead>
+<tbody>
+<tr><td>Soja em grão</td><td class="num">4.423.088</td><td class="num">1.373.769</td><td class="num">3.221</td><td class="num">2.017</td></tr>
+<tr><td>Milho em grão</td><td class="num">2.712.134</td><td class="num">536.729</td><td class="num">5.059</td><td class="num">1.097</td></tr>
+<tr><td>Cana-de-açúcar</td><td class="num">2.583.724</td><td class="num">45.890</td><td class="num">56.303</td><td class="num">301</td></tr>
+<tr><td>Mandioca</td><td class="num">370.376</td><td class="num">47.185</td><td class="num">7.872</td><td class="num">623</td></tr>
+<tr><td>Arroz em casca</td><td class="num">180.334</td><td class="num">77.232</td><td class="num">2.451</td><td class="num">1.694</td></tr>
+<tr><td>Algodão herbáceo</td><td class="num">135.690</td><td class="num">32.996</td><td class="num">4.112</td><td class="num">2.208</td></tr>
+</tbody>
+</table>
+<p class="nota">Preço implícito = valor / quantidade. Fonte: t1612 n3/21 v109,112,214,215 p2025.</p>
+</section>
+
+<section class="bloco">
+<h2>Lavoura permanente — R$ 163,6 milhões (1,2% do total)</h2>
+<table>
+<thead><tr><th>Produto</th><th class="num">Valor (R$ mil)</th><th class="num">% permanente</th></tr></thead>
+<tbody>
+<tr><td>Banana</td><td class="num">139.008</td><td class="num">85,0%</td></tr>
+<tr><td>Açaí</td><td class="num">8.480</td><td class="num">5,2%</td></tr>
+<tr><td>Castanha de caju</td><td class="num">7.623</td><td class="num">4,7%</td></tr>
+<tr><td>Coco-da-baía*</td><td class="num">4.748</td><td class="num">2,9%</td></tr>
+<tr><td>Demais (mamão, manga, limão, maracujá e outros)</td><td class="num">3.698</td><td class="num">2,2%</td></tr>
+</tbody>
+</table>
+<p class="nota">* Coco em mil frutos. Acerola, cupuaçu e graviola, novos em 2025, sem registro no MA. Fonte: t1613 n3/21 v215 p2025 c82/all</p>
+</section>
+
+<section class="bloco">
+<h2>De onde vem cada número</h2>
+<table>
+<thead><tr><th>Indicador</th><th>Período</th><th>Fonte e filtro</th></tr></thead>
+<tbody>
+<tr><td>Valor e área totais</td><td>2025</td><td>SIDRA API tabelas 1612 e 1613, n3 UF 21 Maranhão, variáveis 109 área plantada, 215 valor</td></tr>
+<tr><td>Valor e quantidade por produto temporário</td><td>2025</td><td>SIDRA API t1612 n3/21 v214,215 p2025 c81/all</td></tr>
+<tr><td>Valor por produto permanente</td><td>2025</td><td>SIDRA API t1613 n3/21 v215 p2025 c82/all</td></tr>
+<tr><td>Área e rendimento soja, milho, cana, arroz, algodão, mandioca</td><td>2025</td><td>SIDRA API t1612 n3/21 v109,112 p2025 c81/2713,2711,2696,2692,2689,2708</td></tr>
+</tbody>
+</table>
+<p class="nota">Último ano consultável na API em 13/10/2026: 2025. Consulta p/2026 retorna vazia. Dados de 2025 são preliminares e podem sofrer errata no SIDRA.</p>
+</section>
+</main>
+<footer>
+Gerado em 13/10/2026 a partir da API SIDRA/IBGE. Números conferíveis repetindo as URLs citadas em apisidra.ibge.gov.br/values/...
+</footer>
+</body>
+</html>
