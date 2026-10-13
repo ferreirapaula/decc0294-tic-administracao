@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Relatório de Turnover — Loja de Roupas de Departamento (2025)</title>
+<style>
+  :root {
+    --azul: #1f4e79;
+    --azul-claro: #d6e4f0;
+    --verde: #2e7d32;
+    --verde-claro: #e8f5e9;
+    --ambar: #f9a825;
+    --ambar-claro: #fff8e1;
+    --vermelho: #c62828;
+    --vermelho-claro: #ffebee;
+    --cinza: #555;
+    --borda: #ddd;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    background: #f4f6f8;
+    color: #222;
+    line-height: 1.5;
+  }
+  header {
+    background: var(--azul);
+    color: #fff;
+    padding: 28px 32px;
+  }
+  header h1 { margin: 0 0 6px; font-size: 1.6rem; }
+  header p { margin: 0; opacity: .9; font-size: .95rem; }
+  main { max-width: 980px; margin: 0 auto; padding: 24px 16px 48px; }
+  section {
+    background: #fff;
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+  }
+  h2 {
+    margin: 0 0 14px;
+    font-size: 1.15rem;
+    color: var(--azul);
+    border-bottom: 2px solid var(--azul-claro);
+    padding-bottom: 6px;
+  }
+  h3 { margin: 18px 0 8px; font-size: 1rem; color: #333; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+    font-size: .92rem;
+  }
+  th, td {
+    border: 1px solid var(--borda);
+    padding: 8px 10px;
+    text-align: left;
+  }
+  th { background: var(--azul-claro); color: var(--azul); }
+  tr:nth-child(even) td { background: #fafafa; }
+  .kpis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin: 12px 0;
+  }
+  .kpi {
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    padding: 14px;
+    text-align: center;
+  }
+  .kpi .valor { font-size: 1.7rem; font-weight: 700; color: var(--azul); }
+  .kpi .rotulo { font-size: .82rem; color: var(--cinza); margin-top: 4px; }
+  .sel-alto { background: var(--ambar-claro); border-color: var(--ambar); }
+  .sel-alto .valor { color: #b26a00; }
+  .barra-linha { display: flex; align-items: center; gap: 10px; margin: 6px 0; }
+  .barra-rotulo { width: 130px; font-size: .88rem; text-align: right; }
+  .barra-fundo { flex: 1; background: var(--azul-claro); border-radius: 4px; height: 20px; overflow: hidden; }
+  .barra-fill { height: 100%; background: var(--azul); border-radius: 4px; }
+  .barra-valor { width: 90px; font-size: .85rem; color: var(--cinza); }
+  .formula {
+    background: var(--azul-claro);
+    border-left: 4px solid var(--azul);
+    padding: 12px 16px;
+    font-family: Consolas, monospace;
+    font-size: .95rem;
+    margin: 10px 0;
+  }
+  .badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: .8rem;
+    font-weight: 600;
+  }
+  .badge-dentro { background: var(--verde-claro); color: var(--verde); }
+  .badge-alto { background: var(--ambar-claro); color: #b26a00; }
+  .badge-alerta { background: var(--vermelho-claro); color: var(--vermelho); }
+  ol, ul { margin: 8px 0; padding-left: 22px; }
+  li { margin: 4px 0; }
+  .notas { font-size: .85rem; color: var(--cinza); }
+  .fontes a { color: var(--azul); }
+  .plano td:first-child { font-weight: 600; white-space: nowrap; }
+  footer {
+    text-align: center;
+    font-size: .8rem;
+    color: var(--cinza);
+    padding: 12px 16px 28px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Relatório de Análise de Turnover</h1>
+  <p>Loja de roupas de departamento · Quadro: 80 funcionários · Período: 01/01/2025 a 31/12/2025 · Fonte dos dados: <code>movimentacoes_loja_roupas.csv</code> (dados simulados)</p>
+</header>
+
+<main>
+
+<section>
+  <h2>1. Fórmula e números-base</h2>
+  <div class="formula">
+    Fórmula da média: Taxa = [(A + D) / 2] / Quadro médio × 100<br>
+    A (admissões) = 22 &nbsp;|&nbsp; D (desligamentos) = 20 &nbsp;|&nbsp; Quadro médio = (80 + 80) / 2 = 80<br>
+    Taxa = [(22 + 20) / 2] / 80 × 100 = 21 / 80 × 100 = <strong>26,25%</strong>
+  </div>
+  <p class="notas">Mesma fórmula aplicada em todas as comparações deste relatório. Quadro estável: 80 no início e 80 no fim do período.</p>
+</section>
+
+<section>
+  <h2>2. Taxa total e classificação</h2>
+  <div class="kpis">
+    <div class="kpi sel-alto">
+      <div class="valor">26,25%</div>
+      <div class="rotulo">Taxa de turnover · classificação: alto</div>
+    </div>
+    <div class="kpi">
+      <div class="valor">22</div>
+      <div class="rotulo">Admissões no período</div>
+    </div>
+    <div class="kpi">
+      <div class="valor">20</div>
+      <div class="rotulo">Desligamentos no período</div>
+    </div>
+    <div class="kpi">
+      <div class="valor">80</div>
+      <div class="rotulo">Quadro médio</div>
+    </div>
+  </div>
+  <p>
+    Escala geral: abaixo de 12% = baixo · 12–20% = normal · 20–30% = alto · acima de 30% = muito alto.<br>
+    <strong>26,25% está na faixa "alto"</strong> na escala geral.
+  </p>
+</section>
+
+<section>
+  <h2>3. Comparação com benchmark do setor</h2>
+  <table>
+    <tr>
+      <th>Benchmark</th>
+      <th>Faixa</th>
+      <th>Situação da loja (26,25%)</th>
+    </tr>
+    <tr>
+      <td>Varejo (setor)</td>
+      <td>25–35%</td>
+      <td><span class="badge badge-dentro">dentro da faixa</span></td>
+    </tr>
+    <tr>
+      <td>Porte pequeno (até 80 func.)</td>
+      <td>20–28%</td>
+      <td><span class="badge badge-dentro">dentro da faixa</span></td>
+    </tr>
+    <tr>
+      <td>Escala geral de referência</td>
+      <td>até 20% = normal</td>
+      <td><span class="badge badge-alto">acima do ideal</span></td>
+    </tr>
+    <tr>
+      <td>New hire turnover (saídas em até 12 meses)</td>
+      <td>até 30%</td>
+      <td><span class="badge badge-alerta">80% — muito acima</span></td>
+    </tr>
+  </table>
+  <p>Leitura: a taxa agregada é esperada para o varejo, mas o <strong>new hire turnover de 80%</strong> indica problema de seleção/onboarding que infla o índice e gasta recurso de recrutamento de forma recorrente.</p>
+</section>
+
+<section>
+  <h2>4. Segmentações</h2>
+
+  <h3>4.1 Voluntário × involuntário</h3>
+  <table>
+    <tr><th>Tipo de saída</th><th>Quantidade</th><th>% das saídas</th></tr>
+    <tr><td>Voluntário (pediu demissão)</td><td>17</td><td>85%</td></tr>
+    <tr><td>Involuntário (empresa demitiu)</td><td>3</td><td>15%</td></tr>
+  </table>
+  <p class="notas">Predomínio de saídas voluntárias: o problema é retenção, não corte de desempenho.</p>
+
+  <h3>4.2 Por departamento</h3>
+  <div class="barra-linha"><div class="barra-rotulo">Vendas</div><div class="barra-fundo"><div class="barra-fill" style="width:45%"></div></div><div class="barra-valor">9 saídas · 45%</div></div>
+  <div class="barra-linha"><div class="barra-rotulo">Caixa</div><div class="barra-fundo"><div class="barra-fill" style="width:25%"></div></div><div class="barra-valor">5 saídas · 25%</div></div>
+  <div class="barra-linha"><div class="barra-rotulo">Estoque</div><div class="barra-fundo"><div class="barra-fill" style="width:15%"></div></div><div class="barra-valor">3 saídas · 15%</div></div>
+  <div class="barra-linha"><div class="barra-rotulo">Logística</div><div class="barra-fundo"><div class="barra-fill" style="width:10%"></div></div><div class="barra-valor">2 saídas · 10%</div></div>
+  <div class="barra-linha"><div class="barra-rotulo">Administrativo</div><div class="barra-fundo"><div class="barra-fill" style="width:5%"></div></div><div class="barra-valor">1 saída · 5%</div></div>
+
+  <h3>4.3 Por nível</h3>
+  <table>
+    <tr><th>Nível</th><th>Saídas</th><th>% das saídas</th></tr>
+    <tr><td>Júnior</td><td>15</td><td>75%</td></tr>
+    <tr><td>Pleno</td><td>4</td><td>20%</td></tr>
+    <tr><td>Sênior</td><td>1</td><td>5%</td></tr>
+  </table>
+
+  <h3>4.4 Por gestor</h3>
+  <table>
+    <tr><th>Gestor</th><th>Departamento</th><th>Saídas</th><th>% das saídas</th></tr>
+    <tr><td>Patrícia</td><td>Vendas</td><td>9</td><td>45%</td></tr>
+    <tr><td>Jorge</td><td>Caixa</td><td>5</td><td>25%</td></tr>
+    <tr><td>Sandra</td><td>Estoque</td><td>3</td><td>15%</td></tr>
+    <tr><td>Vera</td><td>Logística</td><td>2</td><td>10%</td></tr>
+    <tr><td>Marcos</td><td>Administrativo</td><td>1</td><td>5%</td></tr>
+  </table>
+
+  <h3>4.5 Tempo de casa (tenure) e new hire turnover</h3>
+  <div class="kpis">
+    <div class="kpi sel-alto">
+      <div class="valor">80%</div>
+      <div class="rotulo">New hire turnover (16 das 20 saídas com até 365 dias)</div>
+    </div>
+    <div class="kpi">
+      <div class="valor">17</div>
+      <div class="rotulo">Saídas com menos de 120 dias de casa</div>
+    </div>
+    <div class="kpi">
+      <div class="valor">1</div>
+      <div class="rotulo">Saída de sênior (2.000 dias — perda de conhecimento)</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>5. Causas prováveis (a confirmar com exit interviews)</h2>
+  <ol>
+    <li><strong>Onboarding e seleção fracos:</strong> 80% das saídas ocorrem no primeiro ano e 17 em menos de 120 dias — o problema começa na admissão, não só na retenção.</li>
+    <li><strong>Gestão/equidade de liderança em Vendas:</strong> 45% das saídas sob a mesma supervisora, concentradas no piso de vendas.</li>
+    <li><strong>Remuneração e jornada:</strong> causa global nº 1 no varejo (escala, comissão, salário vs. mercado local).</li>
+    <li><strong>Trabalho em equipe de Caixa:</strong> 25% das saídas, com perfil júnior e saídas voluntárias.</li>
+    <li><strong>Perda de sênior em Vendas:</strong> saída com 2.000 dias de casa — possível desalinhamento de carreira/remuneração plena.</li>
+  </ol>
+  <p class="notas">Estas são hipóteses baseadas nos padrões dos dados. A skill exige confirmá-las com 5–10 exit interviews conduzidas por pessoa neutra (não pelo gestor direto).</p>
+</section>
+
+<section>
+  <h2>6. Custo estimado do turnover no período</h2>
+  <p class="notas">Premissas (faixas da skill): custo direto por saída = 1–2 salários mensais do cargo; custo total por saída = 50–200% do salário anual, conforme nível. Salários de referência simulados do varejo: júnior R$ 2.000/mês · pleno R$ 3.000/mês · sênior R$ 4.500/mês.</p>
+  <table>
+    <tr><th>Nível (saídas)</th><th>Custo direto estimado (1–2 salários)</th><th>Custo total estimado (faixa por nível)</th></tr>
+    <tr><td>15 júnior</td><td>R$ 30.000 – R$ 60.000</td><td>R$ 180.000 – R$ 720.000</td></tr>
+    <tr><td>4 pleno</td><td>R$ 12.000 – R$ 24.000</td><td>R$ 72.000 – R$ 288.000</td></tr>
+    <tr><td>1 sênior</td><td>R$ 4.500 – R$ 9.000</td><td>R$ 54.000 – R$ 216.000</td></tr>
+    <tr><th>Total (20 saídas)</th><th>R$ 46.500 – R$ 93.000</th><th>R$ 306.000 – R$ 1.224.000</th></tr>
+  </table>
+  <p>Custos indiretos não monetizados: perda de produtividade do time, perda de conhecimento (sênior), impacto no clima e pressão sobre os que ficam (sobretudo em Vendas e Caixa).</p>
+</section>
+
+<section>
+  <h2>7. Plano de ação</h2>
+  <table class="plano">
+    <tr><th>Prazo</th><th>Ação</th></tr>
+    <tr><td>Semana 1</td><td>Validar o índice com RH formal (A=22, D=20, quadro médio=80) e separar saídas voluntárias/involuntárias — <em>já feito neste relatório</em>.</td></tr>
+    <tr><td>Semanas 2–3</td><td>Aplicar 5–10 exit interviews (priorizar as saídas de Vendas e Caixa dos primeiros 120 dias), conduzidas por pessoa neutra.</td></tr>
+    <tr><td>Semana 4</td><td>Cruzar respostas com os padrões: new hire turnover, Vendas/Patrícia, remuneração vs. mercado local.</td></tr>
+    <tr><td>Semanas 5–8</td><td>Implementar 2 ações: (1) estruturar onboarding de 30–60–90 dias com mentor designado; (2) programa de mentoria e revisão de faixa salarial de vendedores júnior vs. mercado.</td></tr>
+    <tr><td>Mês 4</td><td>Treinamento de liderança focado na supervisão de Vendas (comportamentos de feedback e reconhecimento).</td></tr>
+    <tr><td>Mês 6</td><td>Reavaliar o índice (meta: new hire turnover ≤ 30% e taxa agregada ≤ 25%) e ajustar o plano.</td></tr>
+  </table>
+</section>
+
+<section class="fontes">
+  <h2>8. Fontes</h2>
+  <ul>
+    <li>Edusense — <a href="https://www.edusense.com.br/blog/como-calcular-turnover/">Como calcular turnover</a></li>
+    <li>oHub Base RH — <a href="https://base.ohub.com.br/rh/conteudos/digital-e-analytics/people-analytics/turnover-como-calcular-interpretar-e-agir">Turnover: como calcular, interpretar e agir</a></li>
+    <li>Convenia — <a href="https://blog.convenia.com.br/como-calcular-turnover/">Como calcular Turnover</a></li>
+    <li>Buk — <a href="https://www.buk.com.br/blog/entenda-como-calcular-o-turnover">Fórmula de turnover</a></li>
+    <li>Código do Turnover — <a href="https://codigodoturnover.com/conteudos/como-calcular-turnover">Cálculo e erros comuns</a></li>
+    <li>PlanilhaRH — <a href="https://www.planilharh.com/planilha/de-turnover-e-rotatividade/">Planilha de turnover</a></li>
+  </ul>
+</section>
+
+<section>
+  <h2>9. Limitações</h2>
+  <ul>
+    <li>Dados <strong>simulados</strong> para fins didáticos; não representam uma loja real.</li>
+    <li>Custos são estimativas por faixa com salários hipotéticos — substituir por folha real antes de decidir investimento.</li>
+    <li>Causas são hipóteses indiretas; sem exit interviews não há confirmação.</li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  Relatório gerado com a skill turnover-analysis · cálculo via <code>calcular_turnover.py</code> · base: <code>movimentacoes_loja_roupas.csv</code>
+</footer>
+
+</body>
+</html>
