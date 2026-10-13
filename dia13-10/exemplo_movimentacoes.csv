@@ -1,0 +1,12 @@
+tipo,data,departamento,nivel,gestor,saida,tenure_dias
+admissao,2025-02-01,Comercial,Pleno,Carlos,
+admissao,2025-03-15,TI,Junior,Mariana,
+admissao,2025-05-10,Financeiro,Pleno,Carlos,
+admissao,2025-07-20,Comercial,Junior,Carlos,
+admissao,2025-09-05,TI,Senior,Mariana,
+desligamento,2025-04-30,Comercial,Junior,Carlos,voluntario,95
+desligamento,2025-06-12,TI,Junior,Mariana,involuntario,89
+desligamento,2025-08-25,Comercial,Pleno,Carlos,voluntario,1200
+desligamento,2025-10-18,Financeiro,Pleno,Carlos,voluntario,1500
+desligamento,2025-11-30,Comercial,Junior,Carlos,voluntario,133
+desligamento,2025-12-05,TI,Senior,Mariana,voluntario,98
