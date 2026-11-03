@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Modelo de slides — padrão visual UFMA</title>
+<!-- Em arquivo final, o script empacotar.py embute este CSS dentro de <style>. -->
+<link rel="stylesheet" href="ufma.css">
+</head>
+<body>
+<div id="palco">
+
+  <!-- 1. CAPA -->
+  <section class="slide capa" data-i="0">
+    <span class="filete"></span>
+    <img class="brasao" alt="Brasão da UFMA" src="brasao.png">
+    <span class="mod">Módulo 3</span>
+    <h1>Análise de dados e decisão na administração</h1>
+    <span class="tracinho"></span>
+    <p class="sub">Encontro 1 · Do problema à pergunta de pesquisa</p>
+    <p class="pe">DECC0294 · Tecnologia da Informação e Comunicação Aplicada à Administração · 2026.2</p>
+  </section>
+
+  <!-- 2. VISÃO GERAL -->
+  <section class="slide conteudo" data-i="1">
+    <span class="barra"></span>
+    <span class="eyebrow">Visão geral do módulo</span>
+    <h2>O que você vai construir hoje</h2>
+    <div class="corpo">
+      <div class="overview cols-3">
+        <article class="ciclo dourado">
+          <span class="topo"></span>
+          <span class="rot">Ciclo 3.1</span>
+          <span class="tempo">~50 min</span>
+          <h3>Do problema à pergunta</h3>
+          <div class="pe">
+            <span class="rule"></span>
+            <span class="rot2">Entrega</span>
+            <p>Pergunta de pesquisa delimitada</p>
+          </div>
+        </article>
+        <article class="ciclo teal">
+          <span class="topo"></span>
+          <span class="rot">Ciclo 3.2</span>
+          <span class="tempo">~50 min</span>
+          <h3>Fontes e qualidade dos dados</h3>
+          <div class="pe">
+            <span class="rule"></span>
+            <span class="rot2">Entrega</span>
+            <p>Ficha de avaliação de uma fonte</p>
+          </div>
+        </article>
+        <article class="ciclo amarelo">
+          <span class="topo"></span>
+          <span class="rot">Ciclo 3.3</span>
+          <span class="tempo">~40 min</span>
+          <h3>Primeira análise exploratória</h3>
+          <div class="pe">
+            <span class="rule"></span>
+            <span class="rot2">Entrega</span>
+            <p>Três achados com evidência</p>
+          </div>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Estrutura do módulo</span>
+      <span class="pag">2 / 7</span>
+    </footer>
+  </section>
+
+  <!-- 3. DIVISOR DE CICLO -->
+  <section class="slide divisor" data-i="2">
+    <span class="filete"></span>
+    <div class="esq"><span class="rot">Ciclo</span><span class="num">3.1</span></div>
+    <div class="dir">
+      <h2>Do problema à pergunta</h2>
+      <p class="etapas">Teoria 20 · Demonstração 10 · Prática 15 · Entrega 5 min</p>
+      <p class="tempo">~50 minutos</p>
+    </div>
+    <span class="pag">3 / 7</span>
+  </section>
+
+  <!-- 4. CARTÕES -->
+  <section class="slide conteudo" data-i="3">
+    <span class="barra"></span>
+    <span class="eyebrow">Ciclo 3.1 · Teoria</span>
+    <h2>Três perguntas que delimitam o problema</h2>
+    <p class="sub">Cada pergunta reduz o escopo antes da coleta</p>
+    <div class="corpo">
+      <div class="cards cols-3">
+        <article class="card dourado">
+          <header>O quê</header>
+          <h3>Qual é o fenômeno observado</h3>
+          <div class="bloco">
+            <span class="rule"></span>
+            <span class="rot">Exemplo</span>
+            <p>Queda de matrículas em cursos noturnos.</p>
+          </div>
+        </article>
+        <article class="card teal">
+          <header>Quem</header>
+          <h3>Qual é a população afetada</h3>
+          <div class="bloco">
+            <span class="rule"></span>
+            <span class="rot">Exemplo</span>
+            <p>Estudantes do primeiro ano, turno noturno.</p>
+          </div>
+        </article>
+        <article class="card amarelo">
+          <header>Quando</header>
+          <h3>Qual é o recorte temporal</h3>
+          <div class="bloco">
+            <span class="rule"></span>
+            <span class="rot">Exemplo</span>
+            <p>Matrículas entre 2022 e 2025.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Delimitação do problema</span>
+      <span class="pag">4 / 7</span>
+    </footer>
+  </section>
+
+  <!-- 5. INSTRUÇÃO + PASSOS -->
+  <section class="slide conteudo" data-i="4">
+    <span class="barra"></span>
+    <span class="eyebrow">Ciclo 3.1 · Prática</span>
+    <h2>Reescreva o problema em quatro passos</h2>
+    <div class="corpo">
+      <div class="prompt">
+        <span class="rot">Instrução para o agente</span>
+        <p>Reescreva o problema abaixo em uma pergunta com sujeito, recorte e período. Mostre o que mudou.</p>
+      </div>
+      <ol class="steps auto">
+        <li><span class="num">1</span><div><strong>Identifique o sujeito</strong><p>Quem é afetado pelo problema: estudantes, servidores, clientes ou setores.</p></div></li>
+        <li><span class="num">2</span><div><strong>Defina o recorte</strong><p>Qual parte do fenômeno será estudada, com critério de inclusão explícito.</p></div></li>
+        <li><span class="num">3</span><div><strong>Fixe o período</strong><p>De quando até quando os dados valem e qual é a data de corte da coleta.</p></div></li>
+        <li><span class="num">4</span><div><strong>Teste a resposta</strong><p>A pergunta pode ser respondida por uma fonte acessível dentro do prazo?</p></div></li>
+      </ol>
+    </div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Prática guiada</span>
+      <span class="pag">5 / 7</span>
+    </footer>
+  </section>
+
+  <!-- 6. ENTREGA -->
+  <section class="slide conteudo" data-i="5">
+    <span class="barra"></span>
+    <span class="eyebrow">Entrega do ciclo</span>
+    <h2>O que deve ser entregue</h2>
+    <div class="corpo">
+      <div class="entrega">
+        <div class="lista">
+          <header>Checklist</header>
+          <ul>
+            <li>Pergunta de pesquisa com sujeito, recorte e período.</li>
+            <li>Justificativa de uma frase sobre a relevância.</li>
+            <li>Fonte de dados indicada com link verificável.</li>
+            <li>Registro do prompt usado e do que foi alterado.</li>
+          </ul>
+        </div>
+        <div class="lado">
+          <div class="box onde">
+            <span class="rot">Onde entregar</span>
+            <p>Pasta da turma no ambiente da disciplina, até o fim do encontro.</p>
+          </div>
+          <div class="box criterio">
+            <span class="rot">Critério</span>
+            <p>Pergunta delimitada e fonte verificável valem 80% da nota.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <span class="inst">UFMA · Curso de Administração · DECC0294</span>
+      <span class="centro">Entrega</span>
+      <span class="pag">6 / 7</span>
+    </footer>
+  </section>
+
+  <!-- 7. ENCERRAMENTO -->
+  <section class="slide fim" data-i="6">
+    <span class="filete"></span>
+    <h1>Módulo 3 concluído</h1>
+    <p>Próximo encontro: coleta e tratamento de dados, com a entrega A2.</p>
+    <span class="slogan">Sempre+ Qualidade Inovação Inclusão</span>
+  </section>
+
+</div>
+
+<div id="barra">
+  <button id="ant" title="Anterior" aria-label="Slide anterior">&#8249;</button>
+  <input id="atual" value="1" title="Ir para o slide" aria-label="Número do slide"> <span>/ 7</span>
+  <button id="prox" title="Próximo" aria-label="Próximo slide">&#8250;</button>
+  <button id="tela" title="Tela cheia" aria-label="Alternar tela cheia">&#9744;</button>
+</div>
+<div id="ajuda">setas navegam · F tela cheia · Ctrl+P gera PDF</div>
+
+<script>
+(function(){
+  var slides=[].slice.call(document.querySelectorAll('.slide'));
+  var i=0, palco=document.getElementById('palco');
+  function ajusta(){
+    var e=Math.min(window.innerWidth/1280, window.innerHeight/720);
+    slides.forEach(function(s){ s.style.transform='scale('+e+')'; });
+  }
+  function ir(n){
+    i=Math.max(0,Math.min(slides.length-1,n));
+    slides.forEach(function(s,k){ s.classList.toggle('ativo',k===i); });
+    document.getElementById('atual').value=(i+1);
+    location.hash=(i+1);
+  }
+  window.addEventListener('resize',ajusta);
+  window.addEventListener('hashchange',function(){
+    var n=parseInt(location.hash.replace('#',''),10);
+    if(n && n-1!==i) ir(n-1);
+  });
+  var t=null;
+  function mexeu(){
+    document.body.classList.add('mexeu');
+    clearTimeout(t);
+    t=setTimeout(function(){ document.body.classList.remove('mexeu'); },2500);
+  }
+  window.addEventListener('mousemove',mexeu);
+  document.addEventListener('keydown',function(e){
+    if(e.target.tagName==='INPUT') return;
+    if(['ArrowRight','PageDown',' ','Enter','n'].indexOf(e.key)>=0){ ir(i+1); e.preventDefault(); }
+    else if(['ArrowLeft','PageUp','p'].indexOf(e.key)>=0){ ir(i-1); e.preventDefault(); }
+    else if(e.key==='Home'){ ir(0); }
+    else if(e.key==='End'){ ir(slides.length-1); }
+    else if(e.key==='f'||e.key==='F'){
+      if(document.fullscreenElement) document.exitFullscreen();
+      else document.documentElement.requestFullscreen();
+    }
+  });
+  palco.addEventListener('click',function(e){
+    ir(e.clientX < window.innerWidth*0.3 ? i-1 : i+1);
+  });
+  document.getElementById('ant').onclick=function(e){ e.stopPropagation(); ir(i-1); };
+  document.getElementById('prox').onclick=function(e){ e.stopPropagation(); ir(i+1); };
+  document.getElementById('tela').onclick=function(e){
+    e.stopPropagation();
+    if(document.fullscreenElement) document.exitFullscreen();
+    else document.documentElement.requestFullscreen();
+  };
+  document.getElementById('atual').addEventListener('change',function(){ ir(this.value-1); });
+  ajusta();
+  ir(parseInt(location.hash.replace('#',''),10)-1 || 0);
+})();
+</script>
+</body>
+</html>
